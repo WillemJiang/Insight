@@ -29,12 +29,6 @@ export default {
             const dom = document.getElementById('Scatter')
             const chartData = this.data['scatter']
             this.myScatter = scatter(dom, chartData)
-            this.myScatter.on('click', (params) => {
-                if(params.componentType == "series"){
-                    const committees = this.committee_data['scatter'][this.tagList[0]]['yAxis']
-                    this.drawLine(committees[params.value[1]])
-                }
-            });
         },      
     } 
 }
