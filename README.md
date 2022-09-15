@@ -1,6 +1,10 @@
 # Insight
 This repo provides tools to show the data of ASF projects 
 
+## Public data of ASF
+ASF publish the projects and committees information [here](https://whimsy.apache.org/public/)
+We need to process these data for better data visualization with Apache echarts. 
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
