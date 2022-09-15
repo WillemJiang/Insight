@@ -8,12 +8,10 @@ export default {
             data:[]
         }
     },
-    // 先获取数据，然后再开始绘图
     created(){
         this.getData()
     },
     methods:{
-        // 文件获取的api需要单独写在一个文件里
         getData(){
             const request = new XMLHttpRequest();
             request.open("get",'/json/committer.json');

@@ -1,5 +1,5 @@
 <script setup>
-import chart from '../components/chart.vue'
+import chart from '../components/ChartBox.vue'
 
 </script>
 
