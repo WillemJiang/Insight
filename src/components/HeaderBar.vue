@@ -9,8 +9,6 @@
     
     <template>
       <header class="header-bar">
-        <img alt="logo" class="logo" src="@/assets/logo.svg" />
-
         <nav class="header-nav">
             <RouterLink class="header-link" to="/">global</RouterLink>
             <RouterLink class="header-link" to="/projects">projects</RouterLink>
@@ -24,10 +22,6 @@
         width:100%;
         height: 3.5rem;
         border-bottom: 1px solid var(--vt-c-text-dark-2);
-    }
-    .header-bar .logo{
-        height:80%;
-        padding:.3rem 2rem;
     }
     .header-nav{
         height: 100%;
