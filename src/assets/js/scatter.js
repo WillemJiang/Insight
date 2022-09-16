@@ -70,8 +70,6 @@ export default function scatter(dom,data){
         }]
     };
     mychart.setOption(option);
-    window.onresize = () => {
-        mychart.resize()
-    }
+    
     return mychart
 }
