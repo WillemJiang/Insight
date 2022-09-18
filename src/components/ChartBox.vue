@@ -42,8 +42,26 @@ export default {
             const chartData = this.data['scatter']
             this.myScatter = scatter(dom, chartData)
             this.myScatter.on('click', (params) => {
-                if(params.componentType == "series"){
-                    const committees = chartData[params.seriesName]['yAxis']
+                if(params.componentType == "graphic"){
+                    const data = chartData[params.name]
+                    const years = data['xAxis']
+                    const committees = data['yAxis']
+                    const size = data['size'].map(function (item) {
+                        return [item[1], item[0], item[2]];
+                    });
+                    this.myScatter.setOption({
+                        xAxis: {
+                            data: years,
+                        },
+                        yAxis: {
+                            data: committees,
+                        },
+                        series: [{
+                            data: size
+                        }]
+                    })
+                }else if(params.componentType == "series"){
+                    const committees = this.committee_data['scatter'][this.tagList[0]]['yAxis']
                     this.drawLine(committees[params.value[1]])
                 }
             });

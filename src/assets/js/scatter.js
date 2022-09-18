@@ -8,6 +8,19 @@ export default function scatter(dom,data){
     const size = data[tagList[0]]['size'].map(function (item) {
         return [item[1], item[0], item[2]];
     });
+    const graphic_list =tagList.map((tag,index)=>{
+        return  {
+            name: tag,
+            type: 'text',
+            left: 450 + index * 160,
+            top: 20,
+            style: {
+                text: tag,
+                fontSize: 18
+            }
+        }
+
+    })
     const option = {
         title: {
             text: 'Trends in the growth of committees',
@@ -54,6 +67,7 @@ export default function scatter(dom,data){
                 show: false
             }
         },
+        graphic: graphic_list,
         series: [{
             name: tagList[0],
             type: 'scatter',
