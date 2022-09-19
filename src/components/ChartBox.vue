@@ -61,7 +61,7 @@ export default {
                         }]
                     })
                 }else if(params.componentType == "series"){
-                    const committees = this.committee_data['scatter'][this.tagList[0]]['yAxis']
+                    const committees = chartData[params.seriesName]['yAxis']
                     this.drawLine(committees[params.value[1]])
                 }
             });
