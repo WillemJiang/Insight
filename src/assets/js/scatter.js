@@ -10,15 +10,16 @@ export default function scatter(dom,data){
     });
     const graphic_list =tagList.map((tag,index)=>{
         return  {
-            name:tag,
+            name: tag,
             type: 'text',
-            left: 350 + index * 20,
+            left: 450 + index * 160,
             top: 20,
             style: {
                 text: tag,
                 fontSize: 18
             }
         }
+
     })
     const option = {
         title: {
@@ -31,7 +32,7 @@ export default function scatter(dom,data){
             axisPointer: {
                 type: 'cross'
             },
-            formatter: function (params, ticket, callback) {
+            formatter: function (params) {
                 if(params.componentSubType == 'scatter'){
                     const size = params.data[2]
                     const xAxis = years[params.data[0]]
@@ -66,7 +67,7 @@ export default function scatter(dom,data){
                 show: false
             }
         },
-        // graphic: graphic_list,
+        graphic: graphic_list,
         series: [{
             name: tagList[0],
             type: 'scatter',
@@ -83,8 +84,6 @@ export default function scatter(dom,data){
         }]
     };
     mychart.setOption(option);
-    window.onresize = () => {
-        mychart.resize()
-    }
+    
     return mychart
 }
