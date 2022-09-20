@@ -23,10 +23,9 @@ def getHtml(url):
 
         # extract the response
         html = response.read().decode('utf-8')
-    except Exception as e:
+    except TimeoutError as t:
+        print('Access timeout!')
         
-        page = e.partial
-        html = page.decode('utf-8')
 
     return html
 
@@ -51,11 +50,12 @@ def htmlToDict(html):
 
 def getTag(soup):
 
-    try:
-        tag_list = [tag.text.strip() for tag in soup.find_all('a',class_='topic-tag')]
+    tag_a_list = soup.find_all('a',class_='topic-tag')
+
+    if len(tag_a_list) > 0:
+        tag_list = [tag.text.strip() for tag in tag_a_list]
         tagStr = ','.join(tag_list)
-    except:
-        print(tag_list)
+    else:
         return ''
 
     return tagStr
@@ -63,14 +63,14 @@ def getTag(soup):
 
 def getDetail(soup):
 
-    try: 
-        name = soup.find('a',class_='d-inline-block').text.strip()
-        language = soup.find('span',class_='mr-3').text.strip()
-    except:
-        print(soup.find('span',class_='mr-3'))
+    name= soup.find('a',class_='d-inline-block').text.strip()
+    language_dom= soup.find('span',class_='mr-3')
+    if language_dom != None:
+        language = language_dom.text.strip()
+        return name, language
+    else:
         return name,''
     
-    return name, language
 
 
 def Merge(dict1, dict2): 
