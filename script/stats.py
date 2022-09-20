@@ -6,25 +6,6 @@ import datetime
 from urllib.request import urlopen
 
 
-# Show all data 
-pd.set_option('display.max_columns',None)
-pd.set_option('display.max_rows',None)
-
-
-
-def dataFilter(raw_df):
-    
-    committee_list = raw_df['committee']
-    drop_list = []
-    for committee_name in committee_list:
-        sub_df = raw_df[raw_df['committee'] == committee_name] 
-        if sub_df['size'].max() < 15:
-            drop_list.append(committee_name)
-            index = raw_df[raw_df['committee'] == committee_name].index[0]
-            raw_df = raw_df.drop(index=index)
-    return raw_df
-
-
 def chartData(raw_df):
 
     yAxis_value = list(set(raw_df['committee']))
@@ -42,11 +23,8 @@ def chartData(raw_df):
 
 
 def getTag(str):
-    if pd.isna(str) == False:
-        try:
-            return tag_dict[str]["tag"]
-        except:
-            return str
+    if (pd.isna(str) == False) & (tag_dict.__contains__(str)):
+        return tag_dict[str]["tag"]
     else:
         return ''
     
@@ -66,7 +44,7 @@ def getData(raw_df):
     return result_df
 
 # Grouped by tag
-def ScatterData(raw_df):
+def scatterData(raw_df):
     df = addTag(raw_df)
     tag_list =list(set(','.join(list(df['tag'])).split(',')))
     tag_list.remove('')
@@ -91,7 +69,7 @@ def completeMonthColumn(df):
     df['year_month'] = df['year'].map(str) +'-' +df['month'].map(str)
     result_dict = {}
 
-    for committee in committeeList:
+    for committee in committee_list:
         sub_df = df[df['committee'] == committee]
         year_list = sub_df['year']
         date_list = list(sub_df['year_month'])
@@ -124,23 +102,22 @@ def lineData(raw_df):
     
 
 
-def getCommitter(committees):
+def getPMCMemeber(committees):
     # Create a datafame, which contains the members' information for each committee: committee name, name, id, date
-    committer = pd.DataFrame()
-    print(committees)
+    pmc_member = pd.DataFrame()
     for item in committees:
         committee_info = pd.DataFrame.from_dict(committees[item]['roster'],orient='index',columns=['name','date'])
         committee_info['committee'] = item
         committee_info['description'] = committees[item]['description']
 
-        committer = pd.concat([committer,committee_info],axis = 0)
+        pmc_member = pd.concat([pmc_member,committee_info],axis = 0)
 
-    committer['date'] = pd.to_datetime(committer['date'])
-    committer['year'] = committer['date'].dt.year
-    committer['month'] = committer['date'].dt.month
-    committeeList = list(set(committer['committee']))
+    pmc_member['date'] = pd.to_datetime(pmc_member['date'])
+    pmc_member['year'] = pmc_member['date'].dt.year
+    pmc_member['month'] = pmc_member['date'].dt.month
+    committee_list = list(set(pmc_member['committee']))
 
-    return committer, committeeList
+    return pmc_member, committeeList
 
 
 def readJson(json_file):
@@ -169,14 +146,14 @@ def saveData(dict,file_name,mode='w'):
 def getCommittees(url):
     committees_info = readJson(url)
     committees = committees_info['committees']
-    committer, committeeList = getCommitter(committees)
+    pmc_member, committee_list = getPMCMemeber(committees)
     committees = pd.DataFrame.from_dict(committees,orient='index',columns=[ "display_name","established","roster_count"])
     committees['established'] = pd.to_datetime(committees['established'].map(extractDate))
     committees['description'] = [committees_info['committees'][index]['description'] for index in committees.index]
     committees.reset_index(inplace=True)
     committees.rename(columns={'index':'committee_name'},inplace=True)
 
-    return committees,committer,committees_info, committeeList
+    return committees,pmc_member,committees_info, committee_list
 
 if __name__ == '__main__':
     today = datetime.datetime.today()
@@ -188,15 +165,15 @@ if __name__ == '__main__':
     # The 'committee-info.json' was downloaded from 'https://whimsy.apache.org/public/'
     # or get data directly from 'https://whimsy.apache.org/public/committee-info.json'
 
-    committees,committer,committees_info, committeeList = getCommittees('https://whimsy.apache.org/public/committee-info.json')
+    committees,pmc_member,committees_info, committee_list = getCommittees('https://whimsy.apache.org/public/committee-info.json')
 
-    scatter = ScatterData(committer)
-    committee_detail_dict = lineData(committer)
+    scatter = scatterData(pmc_member)
+    committee_detail_dict = lineData(pmc_member)
 
     committee_data = {
         'scatter':scatter,
         "committee_detail":committee_detail_dict
     }
 
-    file_name = './public/json/committer.json'
+    file_name = './public/json/committee.json'
     saveData(committee_data,file_name)
