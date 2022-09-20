@@ -28,7 +28,7 @@ def getTag(str):
     else:
         return ''
     
-
+# Add tags to projects
 def addTag(raw_df):
     df = raw_df
     df['tag'] = df['committee'].apply(getTag)
@@ -43,12 +43,20 @@ def getData(raw_df):
 
     return result_df
 
+# Remove meaningless tags
+def tagFilter(df):
+    tag_list =list(set(','.join(list(df['tag'])).split(',')))
+    tag_list.remove('')
+
+    for tag in tag_remove_list:
+        tag_list.remove(tag)
+
+    return tag_list
+
 # Grouped by tag
 def scatterData(raw_df):
     df = addTag(raw_df)
-    tag_list =list(set(','.join(list(df['tag'])).split(',')))
-    tag_list.remove('')
-    tag_list.remove('apache')
+    tag_list = tagFilter(df)
     result = {}
     for tag in tag_list:
         sub_df = df[ df['tag'].apply(lambda x: tag in x)]
@@ -60,7 +68,6 @@ def scatterData(raw_df):
     for r in res:
         scatter_dict[r[0]] = r[1]
     return scatter_dict
-        
     
 
 # Subchart: monthly growth graph for the selected committee 
@@ -117,7 +124,7 @@ def getPMCMemeber(committees):
     pmc_member['month'] = pmc_member['date'].dt.month
     committee_list = list(set(pmc_member['committee']))
 
-    return pmc_member, committeeList
+    return pmc_member, committee_list
 
 
 def readJson(json_file):
@@ -160,6 +167,9 @@ if __name__ == '__main__':
 
     # If the projects_total.json file does not exist, you need to execute the spider.py file first
     tag_dict  = readJson('./public/json/projects_total.json')
+
+    # meaningless tags list
+    tag_remove_list =['apache']
 
     # Read the information in 'committee-info.json' which contains information such as roste_count, description, established, roster, etc.
     # The 'committee-info.json' was downloaded from 'https://whimsy.apache.org/public/'
