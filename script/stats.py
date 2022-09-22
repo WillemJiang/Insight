@@ -59,7 +59,7 @@ def scatterData(raw_df):
     tag_list = tagFilter(df)
     result = {}
     for tag in tag_list:
-        sub_df = df[ df['tag'].apply(lambda x: tag in x)]
+        sub_df = df[ df['tag'].apply(lambda x: tag in x.split(','))]
         sub_dict = getData(sub_df)
         result[tag] = sub_dict
         result[tag]['num'] = len(sub_dict['yAxis'])
