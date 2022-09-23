@@ -10,16 +10,10 @@ import chart from '../components/ChartBox.vue'
     </div>
   </main>
 </template>
-<style scoped>
-  main{
-    height: 100%;
-    width: 100%;
-    padding: 2rem;
-  }
-  .graphic{
-    border: 1px solid var( --vt-c-divider-light-1);
-    min-height: 100%;
-    padding:2rem;
-  }
 
+<style scoped>
+main{
+  background-color:var( --vt-c-divider-light-2) ;
+
+}
 </style>

@@ -76,7 +76,6 @@ export default {
             const dom = document.getElementById('popup')
             this.popup = line(dom, data, title, ()=>{
                 this.subShow = false
-
             })
         }, 
     } 
