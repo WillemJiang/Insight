@@ -1,3 +1,4 @@
+from cmath import log
 import urllib.request
 import time
 import re
@@ -30,22 +31,20 @@ def getHtml(url):
     return html
 
 
-def htmlToDict(html):
+def htmlToDict(raw_dict,html):
 
     soup = BeautifulSoup(html,"lxml")
-    dict = {}
+    res_dict = raw_dict
 
     repo_list = soup.find_all("li",class_="Box-row")
     for repo in repo_list:
-
-        name, programmingLanguage = getDetail(repo)
+        name_str, dic= getDetail(repo)
         tag = getTag(repo)
+        dic['tag'] = tag
 
-        dict[name]={}
-        dict[name]['programmingLanguage'] = programmingLanguage
-        dict[name]['tag'] = tag
+        res_dict = Merge(res_dict, name_str, dic) 
     
-    return dict
+    return res_dict
 
 
 def getTag(soup):
@@ -61,22 +60,54 @@ def getTag(soup):
     return tagStr
 
 
+def getParentText(soup):
+    if soup != None:
+        return soup.parent.text.strip()
+
+    return ''
+
 def getDetail(soup):
 
     name= soup.find('a',class_='d-inline-block').text.strip()
-    language_dom= soup.find('span',class_='mr-3')
-    if language_dom != None:
-        language = language_dom.text.strip()
-        return name, language
+    description = soup.find('p',class_ = 'wb-break-word').text.strip()
+    programmingLanguage = getParentText(soup.find('span',class_="repo-language-color"))
+    issue =getParentText(soup.find('svg',class_="octicon-issue-opened"))
+    star = getParentText(soup.find('svg',class_="octicon-star"))
+    pr = getParentText(soup.find('svg',class_= "octicon-git-pull-request"))
+    fork = getParentText(soup.find('svg',class_="octicon-repo-forked"))
+
+    return name, {
+        "description":description,
+        "programmingLanguage":programmingLanguage,
+        "issue":issue,
+        "star":star,
+        "pr":pr,
+        "fork":fork
+    }
+
+
+def Merge(dict1, name_str, dict2): 
+
+    res = dict1
+    name_list = name_str.split('-')
+    name = name_list[0]
+
+    if res.__contains__(name) == False:
+        res[name] = {
+            'logo':'https://apache.org/logos/res/%s/default.png' %name
+        }
+
+    if len(name_list) > 1:
+        if res[name].__contains__('children') == False:
+            res[name]['children'] = {}
+
+        
+        res[name]['children'][name_str] = dict2
+
     else:
-        return name,''
-    
+        res[name] = {**res[name],**dict2}
 
-
-def Merge(dict1, dict2): 
-
-    res = {**dict1, **dict2} 
-    return res 
+    return res
 
 
 def getTotal():
@@ -86,12 +117,12 @@ def getTotal():
     print('There are %s pages in total'%total_page)
     dict = {}
     for page in range(1,total_page + 1):
+
         time.sleep(.6)
         print('page'+ str(page) + ' is running ...')
         url = "https://github.com/orgs/apache/repositories?page=%s&type=all" %page
         html = getHtml(url)
-        dic = htmlToDict(html)
-        dict = Merge(dict,dic) 
+        dict = htmlToDict(dict,html)
     return dict
 
 
