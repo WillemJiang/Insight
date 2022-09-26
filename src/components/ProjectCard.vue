@@ -1,5 +1,5 @@
 <template>
-    <div class="project-card-box">
+    <div class="project-card-box" draggable="true">
         <div class="logo-box">
             <i class="fa  fa-spinner fa-lg"></i>
         </div>
