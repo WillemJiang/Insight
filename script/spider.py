@@ -62,7 +62,7 @@ def getTag(soup):
 
 def getParentText(soup):
     if soup != None:
-        return soup.parent.text.strip()
+        return soup.parent.text.strip().replace(',','')
 
     return ''
 
@@ -71,10 +71,10 @@ def getDetail(soup):
     name= soup.find('a',class_='d-inline-block').text.strip()
     description = soup.find('p',class_ = 'wb-break-word').text.strip() if soup.find('p',class_ = 'wb-break-word') != None else ''
     programmingLanguage = getParentText(soup.find('span',class_="repo-language-color"))
-    issue =getParentText(soup.find('svg',class_="octicon-issue-opened"))
-    star = getParentText(soup.find('svg',class_="octicon-star"))
-    pr = getParentText(soup.find('svg',class_= "octicon-git-pull-request"))
-    fork = getParentText(soup.find('svg',class_="octicon-repo-forked"))
+    issue =int(getParentText(soup.find('svg',class_="octicon-issue-opened")))
+    star = int(getParentText(soup.find('svg',class_="octicon-star")))
+    pr = int(getParentText(soup.find('svg',class_= "octicon-git-pull-request")))
+    fork = int(getParentText(soup.find('svg',class_="octicon-repo-forked")))
 
     return name, {
         "description":description,
@@ -86,26 +86,28 @@ def getDetail(soup):
     }
 
 
-def Merge(dict1, name_str, dict2): 
+def Merge(main_dict, name_str, sub_dict): 
 
-    res = dict1
+    res = main_dict
     name_list = name_str.split('-')
+    # Get Project Name
     name = name_list[0]
-
+     
     if res.__contains__(name) == False:
         res[name] = {
             'logo':'https://apache.org/logos/res/%s/default.png' %name
         }
-
+    # Determine if the repository is a subrepo of a project
     if len(name_list) > 1:
+        # Post child repositories to the children field of the main project
         if res[name].__contains__('children') == False:
             res[name]['children'] = {}
 
-        
-        res[name]['children'][name_str] = dict2
+        res[name]['children'][name_str] = sub_dict
 
     else:
-        res[name] = {**res[name],**dict2}
+        # If it is not a sub-repository, it is stored in the main dictionary as an item
+        res[name] = {**res[name],**sub_dict}
 
     return res
 

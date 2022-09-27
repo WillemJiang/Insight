@@ -27,7 +27,7 @@ export default {
     methods:{
         getData(){
             const request = new XMLHttpRequest();
-            request.open("get",'/json/committee.json');
+            request.open("get",'/json/committer.json');
             request.send(null);
             request.onload = () => {
                 if(request.status == 200) {
@@ -61,7 +61,7 @@ export default {
                         }]
                     })
                 }else if(params.componentType == "series"){
-                    const committees = this.committee_data['scatter'][this.tagList[0]]['yAxis']
+                    const committees = chartData[params.seriesName]['yAxis']
                     this.drawLine(committees[params.value[1]])
                 }
             });
@@ -76,7 +76,6 @@ export default {
             const dom = document.getElementById('popup')
             this.popup = line(dom, data, title, ()=>{
                 this.subShow = false
-
             })
         }, 
     } 
