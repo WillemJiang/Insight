@@ -69,7 +69,7 @@ def getParentText(soup):
 def getDetail(soup):
 
     name= soup.find('a',class_='d-inline-block').text.strip()
-    description = soup.find('p',class_ = 'wb-break-word').text.strip()
+    description = soup.find('p',class_ = 'wb-break-word').text.strip() if soup.find('p',class_ = 'wb-break-word') != None else ''
     programmingLanguage = getParentText(soup.find('span',class_="repo-language-color"))
     issue =getParentText(soup.find('svg',class_="octicon-issue-opened"))
     star = getParentText(soup.find('svg',class_="octicon-star"))
