@@ -27,7 +27,7 @@ export default {
     methods:{
         getData(){
             const request = new XMLHttpRequest();
-            request.open("get",'/json/committer.json');
+            request.open("get",'/json/committee.json');
             request.send(null);
             request.onload = () => {
                 if(request.status == 200) {
