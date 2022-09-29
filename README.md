@@ -5,6 +5,9 @@ This repo provides tools to show the data of ASF projects
 ASF publish the projects and committees information [here](https://whimsy.apache.org/public/)
 We need to process these data for better data visualization with Apache echarts. 
 
+## Preparations for project start-up
+Before starting the project, you first need to run the spider.py file in the script folder to get the latest project information and then run the stats.ipynb file to run statistics on the data.
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
