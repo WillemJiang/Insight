@@ -1,12 +1,22 @@
 <script setup>
     import ProjectCard from "../../components/ProjectCard.vue"
-    import {ref} from 'vue';
+    import {ref, inject} from 'vue';
+    import {useRoute} from 'vue-router'
+    
+    //    接收参数
+
+    const route = useRoute()
+    const project_name = route.query.project
 
     // nav 
+    const projects_list = inject('committee')['committees']
     const NavShow = ref(false)
     const NavSwitch = () => {
         NavShow.value = !NavShow.value
     }
+    // 点击card，切换项目详情页
+    
+
     // 拖拽
     const dragItem = ref(null)
     const list2 = ref([])
@@ -40,7 +50,6 @@
     const drop = () => {
         const code= dragItem.value;
         list2.value.push(code);
-        console.log(list2.value);
         dragItem.value = null;
     }
 
@@ -51,6 +60,7 @@
     <main>
         <div class="graphic-box">
             <div class="graphic" ref="canvas">
+                <RouterView/>
             </div>
         </div>
         <div class="right-nav" :class="NavShow?'right-nav-active':'right-nav-hidden'"  >
@@ -58,8 +68,13 @@
             <button class="nav-switch-close" @click="NavSwitch"><i class="fa fa-times"></i></button>
 
             <ul class="projects-list">
-                <div v-for="item in 6" v-bind:key="item">
-                    <ProjectCard   @click="turnTo" @dragstart="e => dragstart(e, item)" @dragend="dragend"></ProjectCard>
+                <div v-for="(project, key) in projects_list" v-bind:key="key">
+                    <ProjectCard   
+                    @click="turnTo(project)" 
+                    @dragstart="e => dragstart(e, item)" 
+                    @dragend="dragend"
+                    :name="key"
+                    :project_info="project"/>
                 </div>
             </ul>
         </div>        

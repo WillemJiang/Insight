@@ -25,7 +25,14 @@ const router = createRouter({
 				{
 					path:"detail",
 					name:"Detail",
-					component:() => import('../views/projects/ProjectDetail.vue')
+					component:() => import('../views/projects/ProjectDetail.vue'),
+          children:[{
+            path:"",
+            component:() => import('../views/projects/ChartTemplates/SimpleProjectTemplate.vue'),
+          },{
+            path:"compare",
+            component:() => import('../views/projects/ChartTemplates/MultiProjectTemplates.vue'),
+          }]
 				},
 			]
     }

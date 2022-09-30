@@ -9,8 +9,8 @@ const router = useRouter();
 // projects card
 const projectList = inject('committee')['committees']
 
-const turnTo = () => {
-    router.push('/projects/detail');
+const turnTo = (project) => {
+    router.push(`/projects/detail/compare${project}`);
 };
 
 </script>
@@ -18,14 +18,14 @@ const turnTo = () => {
 <template>
     <main>
         <SearchBox class="search"/>
-        
+
         <ul class="projects-list">
             <ProjectCard 
             v-for="(project, key) in projectList" 
             v-bind:key="key" 
             :name="key"
             :project_info="project"
-            @click="turnTo"
+            @click="turnTo(key)"
             />
         </ul>
     </main>
