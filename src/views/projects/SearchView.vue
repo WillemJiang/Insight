@@ -10,9 +10,8 @@ const router = useRouter();
 const projectList = inject('committee')['committees']
 
 const turnTo = (project) => {
-    router.push(`/projects/detail/compare${project}`);
+    router.push(`/projects/detail/project?project=${project}`);
 };
-
 </script>
 
 <template>

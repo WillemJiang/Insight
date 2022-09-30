@@ -24,7 +24,6 @@ const card_title = ref(props.name.toUpperCase())
 
 <style scoped>
 .project-card-box{
-    /* display: inline-flex; */
     width: 25rem;
     height: 10rem; 
     border-radius: var(--border-radius);
@@ -60,6 +59,7 @@ const card_title = ref(props.name.toUpperCase())
 .project-card-box .info-box .project-name{
     font-size: 2rem;
     line-height: 2;
+
     color: var(--color-heading);
 }
 .project-card-box .info-box .project-description{

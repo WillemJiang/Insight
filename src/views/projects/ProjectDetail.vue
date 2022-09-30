@@ -1,12 +1,7 @@
 <script setup>
     import ProjectCard from "../../components/ProjectCard.vue"
     import {ref, inject} from 'vue';
-    import {useRoute} from 'vue-router'
     
-    //    接收参数
-
-    const route = useRoute()
-    const project_name = route.query.project
 
     // nav 
     const projects_list = inject('committee')['committees']
@@ -14,9 +9,6 @@
     const NavSwitch = () => {
         NavShow.value = !NavShow.value
     }
-    // 点击card，切换项目详情页
-    
-
     // 拖拽
     const dragItem = ref(null)
     const list2 = ref([])
