@@ -2,8 +2,12 @@
 import SearchBox from '../../components/SearchBox.vue';
 import ProjectCard from '../../components/ProjectCard.vue';
 import { useRouter } from 'vue-router';
+import { inject } from 'vue';
 
 const router = useRouter();
+
+// projects card
+const projectList = inject('committee')['committees']
 
 const turnTo = () => {
     router.push('/projects/detail');
@@ -13,9 +17,16 @@ const turnTo = () => {
 
 <template>
     <main>
-        <SearchBox class="search"></SearchBox>
+        <SearchBox class="search"/>
+        
         <ul class="projects-list">
-            <ProjectCard v-for="card in 6" v-bind:key="card" @click="turnTo"></ProjectCard>
+            <ProjectCard 
+            v-for="(project, key) in projectList" 
+            v-bind:key="key" 
+            :name="key"
+            :project_info="project"
+            @click="turnTo"
+            />
         </ul>
     </main>
 </template>
