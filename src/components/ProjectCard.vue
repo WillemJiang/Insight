@@ -1,23 +1,23 @@
 <script setup>
-import { ref } from 'vue';
 
 const props = defineProps({
     'name':String,
     'project_info':Object
 })
 
-const card_title = ref(props.name.toUpperCase())
-
+const card_title = props.name?props.name.toUpperCase():null
+const logo = props.project_info && props.project_info.logo ? props.project_info.logo : null
+const description = props.project_info && props.project_info.description ? props.project_info.description : null
 
 </script>
 <template>
-    <div class="project-card-box" :class="project_info.logo?'has-logo':''" draggable="true">
-        <div v-if="project_info.logo"  class="logo-box">
-            <img  :src="project_info.logo" :alt="name" class="logo">
+    <div class="project-card-box" :class="logo?'has-logo':''" draggable="true">
+        <div v-if="logo"  class="logo-box">
+            <img :src="logo" :alt="name" class="logo">
         </div>
         <div class="info-box">
             <h4 class="project-name">{{card_title}}</h4>
-            <p class="project-description">{{project_info.description}}</p>
+            <p class="project-description">{{description}}</p>
         </div>
     </div>
 </template>
@@ -29,14 +29,13 @@ const card_title = ref(props.name.toUpperCase())
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     margin:2rem;
-    overflow:hidden ;
+    overflow:hidden;
     cursor: pointer;
 }
 .project-card-box .logo-box{
     height: 100%;
     width: 100%;
     top: 0;
-    
 }
 .has-logo:hover .logo-box, .has-logo:hover .info-box{
     transition: all .3s;
@@ -59,11 +58,10 @@ const card_title = ref(props.name.toUpperCase())
 .project-card-box .info-box .project-name{
     font-size: 2rem;
     line-height: 2;
-
     color: var(--color-heading);
 }
 .project-card-box .info-box .project-description{
-    color:var(  --vt-c-text-light-2) ;
+    color:var(--vt-c-text-light-2) ;
 }
 
 </style>
