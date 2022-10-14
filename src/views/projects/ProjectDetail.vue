@@ -15,13 +15,9 @@
     const canvas = ref(null)
     const dragstart = (e, item) => {
         dragItem.value = item;
-        // 设置元素的放置行为——移动
         canvas.value.addEventListener("dragenter", dragenter);
-        // 在目标元素经过 必须要阻止默认行为 否则不能触发drop
         canvas.value.addEventListener("dragover", dragover);
-        // 离开目标元素时设置元素的放置行为——不能拖放
         canvas.value.addEventListener("dragleave", dragleave);
-        // 拖动元素在目标元素松手时添加元素到画布
         canvas.value.addEventListener("drop", drop);
     }
     const dragend = () => {
@@ -45,14 +41,13 @@
         dragItem.value = null;
     }
 
-
 </script>
 
 <template>
     <main>
         <div class="graphic-box">
             <div class="graphic" ref="canvas">
-                <RouterView/>
+                <RouterView :isExpand="!NavShow"/>
             </div>
         </div>
         <div class="right-nav" :class="NavShow?'right-nav-active':'right-nav-hidden'"  >
@@ -97,7 +92,6 @@ main{
     background-color: white;
 }
 .right-nav{
-    height: 100%;
     background: white;
     transition: .3s all;
 }
@@ -133,6 +127,10 @@ main{
 .right-nav-active .nav-switch-close{
     font-size: 1.3rem;
     cursor: pointer;
+}
+.projects-list{
+    max-height: 96%;
+    overflow-y: auto;
 }
 </style>
     

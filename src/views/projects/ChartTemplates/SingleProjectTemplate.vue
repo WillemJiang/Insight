@@ -1,24 +1,42 @@
 <script setup>
-import { inject, onMounted } from 'vue';
+import { inject, onMounted, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import PMCGrowth from '../../../assets/js/PMCGrowth'  
+
+const props = defineProps({
+  'isExpand':Boolean
+})
 
 const route = useRoute()
 const project_name = route.query.project
 const project_info = inject('committee')['committees'][project_name]
 const logo = project_info && project_info.logo ? project_info.logo : null
 
+const PMCChart = ref(null)
 const drawPMCGrowth = function(){
   const dom = document.getElementById('PMC-MEMBER-GROWTH')
-  const PMCChart = PMCGrowth(dom)
+  PMCChart.value = PMCGrowth(dom)
   window.onresize = () => {
-    PMCChart.resize()
+    PMCChart.value.resize()
   }
 }
 
 onMounted(() => {
   drawPMCGrowth()
 })
+
+
+watch(
+  () => props.isExpand,
+  () => {
+    let timer = setInterval(()=>{
+      PMCChart.value.resize()
+    }, 10)
+    setTimeout(()=>{
+      clearInterval(timer)
+    },300)
+  }
+);
 
 </script>
 
@@ -38,9 +56,11 @@ onMounted(() => {
         <div id="PMC-MEMBER-GROWTH" class="graph">
           
         </div>
+        <!-- issue open -->
         <div id="ISSUE-OPEN" class="graph">
           
         </div>
+        <!-- pr -->
         <div id="PR" class="graph">
           
         </div>
