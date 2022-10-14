@@ -1,7 +1,21 @@
+<script setup>
+import {ref, inject, defineEmits} from 'vue';
+
+
+const emit = defineEmits(['search'])
+
+const projects_list = inject('committee')['committees']
+const keywords = ref('')
+const search = function(){
+    const res = Object.entries(projects_list).filter(([key, val]) => key.indexOf(keywords.value) >= 0)
+    emit('search', res)
+    return res
+}
+</script>
 <template>
     <div class="search-box">
-        <input type="text">
-        <i class="fa fa-search fa-lg"></i>
+        <input type="text" v-model="keywords" @keyup.enter="search">
+        <i class="fa fa-search fa-lg" @click="search"></i>
     </div>
 </template>
 

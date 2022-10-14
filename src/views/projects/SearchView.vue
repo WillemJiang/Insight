@@ -2,21 +2,26 @@
 import SearchBox from '../../components/SearchBox.vue';
 import ProjectCard from '../../components/ProjectCard.vue';
 import { useRouter } from 'vue-router';
-import { inject } from 'vue';
+import { ref, inject } from 'vue';
 
 const router = useRouter();
 
 // projects card
-const projectList = inject('committee')['committees']
+const projectList = ref(inject('committee')['committees'])
 
 const turnTo = (project) => {
     router.push(`/projects/detail/project?project=${project}`);
 };
+
+const updateProjectsList = (e) => {
+    projectList.value = Object.fromEntries(e)
+}
 </script>
 
 <template>
     <main>
-        <SearchBox class="search"/>
+        <SearchBox class="search"
+        @search="updateProjectsList"/>
 
         <ul class="projects-list">
             <ProjectCard 
