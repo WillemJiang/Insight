@@ -1,8 +1,10 @@
 <script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 import ProjectCard from "../../components/ProjectCard.vue"
-import {ref, inject} from 'vue';
 import SearchBox from "../../components/SearchBox.vue";
     
+const router = useRouter();
 
 const projectList = ref([])
 const isNone = ref(false)
@@ -22,6 +24,10 @@ const NavSwitch = () => {
     NavShow.value = !NavShow.value
 }
 
+// projects card
+const turnTo = (project) => {
+    router.push(`/projects/detail/project?project=${project}`);
+};
 
 // 拖拽
 const dragItem = ref(null)
@@ -73,7 +79,7 @@ const drop = () => {
             <ul class="projects-list">
                 <div v-for="(project, key) in projectList" v-bind:key="key">
                     <ProjectCard   
-                    @click="turnTo(project)" 
+                    @click="turnTo(key)" 
                     @dragstart="e => dragstart(e, item)" 
                     @dragend="dragend"
                     :name="key"

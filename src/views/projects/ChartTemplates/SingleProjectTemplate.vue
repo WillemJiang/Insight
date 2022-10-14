@@ -1,18 +1,20 @@
 <script setup>
 import { inject, onMounted, ref, watch } from 'vue';
-import { useRoute } from 'vue-router';
-import PMCGrowth from '../../../assets/js/PMCGrowth'  
+import {  useRoute } from 'vue-router';
+import PMCGrowth from '../../../assets/js/PMCGrowth';  
 
 const props = defineProps({
   'isExpand':Boolean
 })
 
 const route = useRoute()
-const project_name = route.query.project
-const project_info = inject('committee')['committees'][project_name]
-const logo = project_info && project_info.logo ? project_info.logo : null
+const projectsList = inject('committee')['committees']
 
+const project_name = ref(route.query.project)
+const project_info = ref(projectsList[project_name.value])
+const logo = ref(project_info.value && project_info.value.logo ? project_info.value.logo : null)
 const PMCChart = ref(null)
+
 const drawPMCGrowth = function(){
   const dom = document.getElementById('PMC-MEMBER-GROWTH')
   PMCChart.value = PMCGrowth(dom)
@@ -25,7 +27,6 @@ onMounted(() => {
   drawPMCGrowth()
 })
 
-
 watch(
   () => props.isExpand,
   () => {
@@ -37,6 +38,16 @@ watch(
     },300)
   }
 );
+
+const updateData = function(name){
+  project_info.value = projectsList[name]
+  logo.value = project_info.value && project_info.value.logo ? project_info.value.logo : null
+}
+
+watch(() => route.query.project,(newValue)=> {
+  project_name.value = newValue
+  updateData(newValue)
+},{ immediate: true })
 
 </script>
 
