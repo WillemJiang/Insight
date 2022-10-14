@@ -1,7 +1,6 @@
 import * as echarts from 'echarts'
 
 export default function PMCGrowth(dom, data){
-  console.log(data);
   const mychart = echarts.init(dom);
   const option = {
     title: {

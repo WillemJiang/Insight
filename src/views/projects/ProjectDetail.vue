@@ -27,8 +27,11 @@ const NavSwitch = () => {
 // projects card click
 const projectCurrent = ref(null)
 const turnTo = (project) => {
-    projectCurrent.value = project
     router.push(`/projects/detail/project?project=${project}`);
+    setTimeout(()=>{
+        projectCurrent.value = project
+    })
+
 };
 
 // projects card drag
