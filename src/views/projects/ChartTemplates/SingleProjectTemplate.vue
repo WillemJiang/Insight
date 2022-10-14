@@ -39,16 +39,6 @@ watch(
   }
 );
 
-const updateData = function(name){
-  project_info.value = projectsList[name]
-  logo.value = project_info.value && project_info.value.logo ? project_info.value.logo : null
-}
-
-watch(() => route.query.project,(newValue)=> {
-  project_name.value = newValue
-  updateData(newValue)
-},{ immediate: true })
-
 </script>
 
 <template>

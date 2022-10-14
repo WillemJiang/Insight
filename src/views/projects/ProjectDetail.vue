@@ -24,12 +24,14 @@ const NavSwitch = () => {
     NavShow.value = !NavShow.value
 }
 
-// projects card
+// projects card click
+const projectCurrent = ref(null)
 const turnTo = (project) => {
+    projectCurrent.value = project
     router.push(`/projects/detail/project?project=${project}`);
 };
 
-// 拖拽
+// projects card drag
 const dragItem = ref(null)
 const list2 = ref([])
 const canvas = ref(null)
@@ -67,7 +69,7 @@ const drop = () => {
     <main>
         <div class="graphic-box">
             <div class="graphic" ref="canvas">
-                <RouterView :isExpand="!NavShow"/>
+                <RouterView :isExpand="!NavShow" :key="projectCurrent"/>
             </div>
         </div>
         <div class="right-nav" :class="NavShow?'right-nav-active':'right-nav-hidden'"  >
