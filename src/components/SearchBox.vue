@@ -1,5 +1,5 @@
 <script setup>
-import {ref, inject, defineEmits} from 'vue';
+import {ref, inject, defineEmits, onMounted} from 'vue';
 
 
 const emit = defineEmits(['search'])
@@ -11,6 +11,9 @@ const search = function(){
     emit('search', res)
     return res
 }
+onMounted(() => {
+    search()
+})
 </script>
 <template>
     <div class="search-box">
