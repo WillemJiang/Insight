@@ -17,7 +17,7 @@ const PMCChart = ref(null)
 
 const drawPMCGrowth = function(){
   const dom = document.getElementById('PMC-MEMBER-GROWTH')
-  PMCChart.value = PMCGrowth(dom)
+  PMCChart.value = PMCGrowth(dom, inject('committee')['committee_detail'][project_name.value])
   window.onresize = () => {
     PMCChart.value.resize()
   }
