@@ -108,7 +108,10 @@ def Merge(main_dict, name_str, sub_dict):
     else:
         # If it is not a sub-repository, it is stored in the main dictionary as an item
         res[name] = {**res[name],**sub_dict}
-
+        try:
+            res[name]['repo'] = getHtml('https://oss.x-lab.info/repo_detail/apache/%s.json'%name)
+        except:
+            print(name,'Failed to read repo data')
     return res
 
 

@@ -19,7 +19,7 @@ const updateProjectsList = (e) => {
 }
 
 // nav 
-const NavShow = ref(false)
+const NavShow = ref(true)
 const NavSwitch = () => {
     NavShow.value = !NavShow.value
 }
@@ -31,7 +31,6 @@ const turnTo = (project) => {
     setTimeout(()=>{
         projectCurrent.value = project
     })
-
 };
 
 // projects card drag
