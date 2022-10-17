@@ -93,6 +93,10 @@ watch(
         <div id="PMC-MEMBER-GROWTH" class="graph">
           
         </div>
+        <!-- participants count -->
+        <div id="PARTICIPANT" class="graph">
+          
+        </div>
         <!-- issue open -->
         <div id="ISSUE-OPEN" class="graph">
           
@@ -105,10 +109,7 @@ watch(
         <div id="PR" class="graph">
           
         </div>
-        <!-- participants count -->
-        <div id="PARTICIPANT" class="graph">
-          
-        </div>
+
       </div>
     </div>
   </main>
