@@ -38,11 +38,27 @@ def getTag(str):
     committees_info['committees'][str]['tag'] = tag
 
     return tag
-    
 # Add tags to projects
 def addTag(raw_df):
     df = raw_df
     df['tag'] = df['committee'].apply(getTag)
+    return df
+
+def getRepoData(str):
+
+    repo = {}
+    if (pd.isna(str) == False) & (github_projects_info.__contains__(str)):
+
+        if github_projects_info[str].__contains__('repo'):
+            repo = json.loads(github_projects_info[str]['repo'])
+
+    committees_info['committees'][str]['repo'] = repo
+
+    return repo
+    
+def addRepoData(raw_df):
+    df = raw_df
+    df['repo'] = df['committee'].apply(getRepoData)
     return df
 
 
@@ -66,7 +82,7 @@ def tagFilter(df):
 
 # Grouped by tag
 def scatterData(raw_df):
-    df = addTag(raw_df)
+    df = addRepoData(addTag(raw_df))
     tag_list = tagFilter(df)
     result = {}
     for tag in tag_list:
