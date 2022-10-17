@@ -50,7 +50,7 @@ export default function(dom, data){
   commentChart = echarts.init(dom,'roma');
   const option = {
     title: {
-      text: 'COMMENT'
+      text: 'COMMENTS'
     },
     tooltip: {
       trigger: 'axis',
