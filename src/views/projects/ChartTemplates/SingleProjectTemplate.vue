@@ -23,9 +23,6 @@ const logo = ref(project_info.value && project_info.value.logo ? project_info.va
 
 const PMCChart = ref(null)
 const drawPMCGrowth = function(){
-  if (PMCChart.value != null && PMCChart.value != "" && PMCChart.value != undefined) {
-    PMCChart.value.dispose();//销毁
-  }
   const dom = document.getElementById('PMC-MEMBER-GROWTH')
   PMCChart.value = PMCGrowth(dom, inject('committee')['committee_detail'][project_name.value])
 }
@@ -33,30 +30,28 @@ const drawPMCGrowth = function(){
 const issueChart = ref(null)
 const drawIssue = function(){
   const dom = document.getElementById('ISSUE-OPEN')
-  issueChart.value = issue(dom, inject('repo')['oi'])
+  issueChart.value = issue(dom, project_info.value['repo']['oi'])
 }
 
 const prChart = ref(null)
 const drawPr = function(){
   const dom = document.getElementById('PR')
-  prChart.value = pr(dom, [{name:'open pull',data:inject('repo')['op']},{name:'merge pull',data:inject('repo')['pm']}])
-  window.onresize = () => {
-    prChart.value.resize()
-  }
+  prChart.value = pr(dom, [{name:'open pull',data:project_info.value['repo']['op']},{name:'merge pull',data:project_info.value['repo']['pm']}])
 }
 
 const commentChart = ref(null)
 const drawComment = function(){
   const dom = document.getElementById('COMMENT')
-  commentChart.value = comment(dom, [{name:'issue comment',data:inject('repo')['ic']},{name:'review comment',data:inject('repo')['rc']}])
+  commentChart.value = comment(dom, [{name:'issue comment',data:project_info.value['repo']['ic']},{name:'review comment',data:project_info.value['repo']['rc']}])
 }
 
 const participantChart = ref(null)
 const drawParticipant = function(){
   const dom = document.getElementById('PARTICIPANT')
-  participantChart.value = participant(dom, inject('repo')['p'])
+  participantChart.value = participant(dom, project_info.value['repo']['p'])
 
 }
+console.log(project_info.value);
 
 onMounted(() => {
   drawPMCGrowth()
