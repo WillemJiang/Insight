@@ -79,7 +79,7 @@ export default function line(dom, data, title, close_func){
             },
             label: {
                 show: true,
-                formatter: function (param) {
+                formatter: function () {
                     return 'established';
                 },
                 position: [40,20],
