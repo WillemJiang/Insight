@@ -1,4 +1,3 @@
-from cmath import log
 import urllib.request
 import time
 import re
@@ -89,7 +88,10 @@ def getDetail(soup):
 def Merge(main_dict, name_str, sub_dict): 
 
     res = main_dict
-    name_list = name_str.split('-')
+    if name_str == 'empire-db':
+        name_list = ['empire-db']
+    else:
+        name_list = name_str.split('-')
     # Get Project Name
     name = name_list[0]
      
@@ -111,7 +113,8 @@ def Merge(main_dict, name_str, sub_dict):
         try:
             res[name]['repo'] = getHtml('https://oss.x-lab.info/repo_detail/apache/%s.json'%name)
         except:
-            print(name,'Failed to read repo data')
+            print(name,' Failed to read repo data')
+
     return res
 
 
@@ -120,15 +123,17 @@ def getTotal():
     soup = BeautifulSoup(getHtml('https://github.com/orgs/apache/repositories?type=all'),"lxml")
     total_page = int(re.findall('data-total-pages="(.*?)"',str(soup.find_all('em',class_="current")[0]))[0])
     print('There are %s pages in total'%total_page)
-    dict = {}
+    project_info = {}
     for page in range(1,total_page + 1):
 
         time.sleep(.6)
         print('page'+ str(page) + ' is running ...')
         url = "https://github.com/orgs/apache/repositories?page=%s&type=all" %page
         html = getHtml(url)
-        dict = htmlToDict(dict,html)
-    return dict
+        project_info = htmlToDict(project_info,html)
+    
+    
+    return project_info
 
 
 def saveData(dict,file_name,mode='w'):
@@ -139,5 +144,9 @@ def saveData(dict,file_name,mode='w'):
 
 
 if __name__ == '__main__':
+    
     data = getTotal()
+    # data.update({'empire-db':dict.pop("empire")})
+    # Make changes to special names
+
     saveData(data,'./public/json/projects_total.json')
