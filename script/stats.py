@@ -1,4 +1,5 @@
 import json
+from urllib import request
 import pandas as pd
 from pandas import NA
 import numpy  as np
@@ -23,10 +24,20 @@ def chartData(raw_df):
 
 
 def getTag(str):
-    if (pd.isna(str) == False) & (tag_dict.__contains__(str)):
-        return tag_dict[str]["tag"]
-    else:
-        return ''
+
+    tag = []
+    if (pd.isna(str) == False) & (github_projects_info.__contains__(str)):
+
+        if github_projects_info[str].__contains__('tag'):
+            tag = github_projects_info[str]['tag'].split(',')
+
+        if github_projects_info[str].__contains__('children'):
+            for key in github_projects_info[str]['children'].keys():
+                tag = tag + github_projects_info[str]['children'][key]['tag'].split(',')
+    tag = ','.join(tag)
+    committees_info['committees'][str]['tag'] = tag
+
+    return tag
     
 # Add tags to projects
 def addTag(raw_df):
@@ -132,7 +143,7 @@ def readJson(json_file):
         response = urlopen(json_file) 
         json_str = response.read()
     else:
-        json_str = open(json_file).read()
+        json_str = open(json_file,encoding='utf-8').read()
 
     json_data = json.loads(json_str)
     return json_data
@@ -147,12 +158,40 @@ def extractDate(x):
 def saveData(dict,file_name,mode='w'):
 
     with open(file_name, mode, encoding='utf-8') as file_obj:
-        json.dump(dict,file_obj, indent=4, ensure_ascii=False)
+        json.dump(dict,file_obj, indent=4, ensure_ascii=False)   
+
+
+# Check if the logo URL is available
+def checkURL(url):
+    
+    try:
+        urlopen(url).code
+        return True
+    except Exception as e:
+            
+        return False
+
+
+def addLogoToCommittee(raw_dict):
+    projects = raw_dict
+    for project_name in projects.keys():
+        print('accessing the logo URL of %s ...'%project_name)
+        logo_url = 'https://apache.org/logos/res/%s/default.png' %project_name
+        if checkURL(logo_url):
+            projects[project_name]['logo'] = logo_url   
+        else:
+            print("%s's logo URL access is invalid"%project_name)
+        
+    return projects
 
 
 def getCommittees(url):
     committees_info = readJson(url)
     committees = committees_info['committees']
+
+    # Adding a logo to the committee
+    committees_info['committees'] = addLogoToCommittee(committees_info['committees'])
+
     pmc_member, committee_list = getPMCMemeber(committees)
     committees = pd.DataFrame.from_dict(committees,orient='index',columns=[ "display_name","established","roster_count"])
     committees['established'] = pd.to_datetime(committees['established'].map(extractDate))
@@ -166,7 +205,7 @@ if __name__ == '__main__':
     today = datetime.datetime.today()
 
     # If the projects_total.json file does not exist, you need to execute the spider.py file first
-    tag_dict  = readJson('./public/json/projects_total.json')
+    github_projects_info  = readJson('./public/json/projects_total.json')
 
     # meaningless tags list
     tag_remove_list =['apache']
@@ -181,6 +220,7 @@ if __name__ == '__main__':
     committee_detail_dict = lineData(pmc_member)
 
     committee_data = {
+        "committees":committees_info['committees'],
         'scatter':scatter,
         "committee_detail":committee_detail_dict
     }
