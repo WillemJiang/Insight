@@ -1,10 +1,11 @@
 <script setup>
 import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router';
 import ProjectCard from "../../components/ProjectCard.vue"
 import SearchBox from "../../components/SearchBox.vue";
     
 const router = useRouter();
+const route = useRoute()
 
 const projectList = ref([])
 const isNone = ref(false)
@@ -26,16 +27,20 @@ const NavSwitch = () => {
 
 // projects card click
 const projectCurrent = ref(null)
-const turnTo = (project) => {
-    router.push(`/projects/detail/project?project=${project}`);
+const turnTo = (...args) => {
+    if(args.length == 1){
+        router.push(`/projects/detail/project?main=${args.toString()}`);
+    }
+    if(args.length == 2){
+        router.push(`/projects/detail/compare?main=${args.join('&sub=')}`);
+    }
     setTimeout(()=>{
-        projectCurrent.value = project
+        projectCurrent.value = args.toString()
     })
 };
 
 // projects card drag
 const dragItem = ref(null)
-const list2 = ref([])
 const canvas = ref(null)
 const dragstart = (e, item) => {
     dragItem.value = item;
@@ -61,8 +66,7 @@ const dragleave = (e) => {
 }
 const drop = () => {
     const code= dragItem.value;
-    list2.value.push(code);
-    dragItem.value = null;
+    turnTo(route.query.main,code);
 }
 
 </script>
@@ -75,8 +79,8 @@ const drop = () => {
             </div>
         </div>
         <div class="right-nav" :class="NavShow?'right-nav-active':'right-nav-hidden'"  >
-            <button class="nav-switch-open" @click="NavSwitch"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
-            <button class="nav-switch-close" @click="NavSwitch"><i class="fa fa-times"></i></button>
+            <!-- <button class="nav-switch-open" @click="NavSwitch"><i class="fa fa-chevron-left" aria-hidden="true"></i></button> -->
+            <!-- <button class="nav-switch-close" @click="NavSwitch"><i class="fa fa-times"></i></button> -->
             <div class="search-box">
                 <SearchBox @search="updateProjectsList"/>
             </div>
@@ -84,7 +88,7 @@ const drop = () => {
                 <div v-for="(project, key) in projectList" v-bind:key="key">
                     <ProjectCard   
                     @click="turnTo(key)" 
-                    @dragstart="e => dragstart(e, item)" 
+                    @dragstart="e => dragstart(e, key)" 
                     @dragend="dragend"
                     :name="key"
                     :project_info="project"/>

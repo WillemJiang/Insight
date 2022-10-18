@@ -1,17 +1,20 @@
 import * as echarts from 'echarts'
 
-var myChart
-export default function PMCGrowth(dom, data){
-  if (myChart != null && myChart != "" && myChart != undefined) {
 
-    myChart.dispose(); //销毁
 
+export default function(title, dom, config, myChart){
+
+  if (myChart!= null && myChart!= "" && myChart!= undefined) {
+    myChart.dispose();
   }
+
   myChart = echarts.init(dom);
+
+  const {series, xAxis} = config
+
   const option = {
     title: {
-      text: 'PMC Member Growth',
-      subtext: data['description'],
+      text: title,
       top:0,
       left: 0
     },
@@ -21,31 +24,31 @@ export default function PMCGrowth(dom, data){
       right:30,
       bottom:30,
     },
-    xAxis: [
-      {
-          type: 'category',
-          data:data['xAxis']
-      }
-    ],
+    legend:{
+      show:true
+    },
+    tooltip:{
+      trigger:'axis'
+    },
+    xAxis:{
+      type: 'category',
+      data:xAxis
+    },
+
     yAxis: [{
         type: 'value',
         position: 'left',
         alignTicks: true,
         axisLine: {
-            show: true
+          show: true
         },
         axisLabel: {
           formatter: '{value}'
         }
     }],
-    series: [
-      {
-        type: 'bar',
-        data: data.values
-      }
-    ]
+    series: series
   };
   myChart.setOption(option);
-  
+
   return myChart
 }

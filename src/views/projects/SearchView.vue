@@ -8,7 +8,7 @@ const router = useRouter();
 
 // projects card
 const turnTo = (project) => {
-    router.push(`/projects/detail/project?project=${project}`);
+    router.push(`/projects/detail/project?main=${project}`);
 };
 
 // search

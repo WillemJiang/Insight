@@ -1,60 +1,107 @@
 <script setup>
-import { inject, onMounted, ref, watch } from 'vue';
+import { inject, onMounted, ref, watch,onBeforeUnmount } from 'vue';
 import {  useRoute } from 'vue-router';
-import PMCGrowth from '../../../assets/js/PMCGrowth';  
-import issue from '../../../assets/js/issue'
-import pr from '../../../assets/js/pr'
-import comment from '../../../assets/js/comment'
-import participant from '../../../assets/js/participant'
+import bar from '../../../assets/js/bar'
+import getSeries  from '../../../assets/js/getSeries'
 
 
-
+let display = true
 
 const props = defineProps({
   'isExpand':Boolean
 })
 
+const show = ({domId, chart, fun, config, title}) => {
+  const dom = document.getElementById(domId);
+  dom.innerHTML = '';
+  chart = fun(title, dom, config, chart);
+  return chart
+}
+
 const route = useRoute()
 const projectsList = inject('committee')['committees']
 
-const project_name = ref(route.query.project)
-const project_info = ref(projectsList[project_name.value])
-const logo = ref(project_info.value && project_info.value.logo ? project_info.value.logo : null)
+const project_name = route.query.main
+const project_info = projectsList[project_name]
+const logo = ref(project_info&& project_info.logo ? project_info.logo : null)
 
-const PMCChart = ref(null)
+let PMCChart = null
 const drawPMCGrowth = function(){
-  const dom = document.getElementById('PMC-MEMBER-GROWTH')
-  PMCChart.value = PMCGrowth(dom, inject('committee')['committee_detail'][project_name.value])
+  show({
+    domId: 'PMC-MEMBER-GROWTH',
+    title: 'PMC MEMBER GROWTH',
+    chart: PMCChart, 
+    fun: bar, 
+    config:getSeries.numToDate([{
+        name:'pmc',
+        data:inject('committee')[project_name]['PMC']
+    }])
+  })
 }
 
-const issueChart = ref(null)
+let issueChart = null
 const drawIssue = function(){
-  const dom = document.getElementById('ISSUE-OPEN')
-  issueChart.value = issue(dom, project_info.value['repo']['oi'])
+  show({
+    domId: 'ISSUE-OPEN',
+    title:'ISSUE-OPEN',
+    chart: issueChart, 
+    fun: bar, 
+    config:getSeries.numToDate([{
+      name:'issue open',
+      data:project_info['repo']['oi']
+    }])
+  })
 }
 
-const prChart = ref(null)
+let prChart = null
 const drawPr = function(){
-  const dom = document.getElementById('PR')
-  prChart.value = pr(dom, [{name:'open pull',data:project_info.value['repo']['op']},{name:'merge pull',data:project_info.value['repo']['pm']}])
+  show({
+      domId: 'PR',
+      title:'PR',
+      chart: prChart, 
+      fun: bar, 
+      config:getSeries.numToDate([{
+        name:'open pull',
+        data:project_info['repo']['op']
+      },{
+        name:'merge pull',
+        data:project_info['repo']['pm']
+      }])
+  })
 }
 
-const commentChart = ref(null)
+let commentChart = null
 const drawComment = function(){
-  const dom = document.getElementById('COMMENT')
-  commentChart.value = comment(dom, [{name:'issue comment',data:project_info.value['repo']['ic']},{name:'review comment',data:project_info.value['repo']['rc']}])
+  show({
+      domId: 'COMMENT',
+      title:'COMMENTS',
+      chart: commentChart, 
+      fun: bar, 
+      config:getSeries.numToDate([{
+        name:'issue comment',
+        data:project_info['repo']['ic']
+      },{
+        name:'review comment',
+        data:project_info['repo']['rc']
+      }])
+  })
 }
 
-const participantChart = ref(null)
+let participantChart = null
 const drawParticipant = function(){
-  const dom = document.getElementById('PARTICIPANT')
-  participantChart.value = participant(dom, project_info.value['repo']['p'])
-
+  show({
+      domId: 'PARTICIPANT',
+      title:'PARTICIPANT',
+      chart: participantChart, 
+      fun: bar, 
+      config:getSeries.numToDate([{
+        name:'issue comment',
+        data:project_info['repo']['p']
+      }])
+  })
 }
-console.log(project_info.value);
 
 onMounted(() => {
-  drawPMCGrowth()
   drawIssue()
   drawPr()
   drawParticipant()
@@ -66,8 +113,6 @@ watch(
   () => props.isExpand,
   () => {
     let timer = setInterval(()=>{
-      PMCChart.value.resize()
-      issueChart.value.resize()
     }, 10)
     setTimeout(()=>{
       clearInterval(timer)
@@ -75,6 +120,9 @@ watch(
   }
 );
 
+onBeforeUnmount(()=>{
+  display = false
+})
 </script>
 
 <template>
@@ -82,17 +130,17 @@ watch(
     <div class="project-info-box">
       <div class="head-box">
         <div v-if="logo"  class="logo-box">
-          <img :src="logo" :alt="name" class="logo">
+          <img :src="logo" :alt="name" class="logo" >
         </div>
         <div class="project-description">
           {{project_info.description}}
         </div>
       </div>
-      <div class="charts-box">
+      <div class="charts-box" v-if="display">
         <!-- PMC MEMBER GROWTH -->
-        <div id="PMC-MEMBER-GROWTH" class="graph">
+        <!-- <div id="PMC-MEMBER-GROWTH" class="graph" >
           
-        </div>
+        </div> -->
         <!-- participants count -->
         <div id="PARTICIPANT" class="graph">
           
@@ -115,7 +163,7 @@ watch(
   </main>
 </template>
 
-<style>
+<style scoped>
 .project-info-box{
   width: 100%;
 }
