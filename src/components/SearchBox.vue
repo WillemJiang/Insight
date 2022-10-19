@@ -7,7 +7,7 @@ const emit = defineEmits(['search'])
 const projects_list = inject('committee')['committees']
 const keywords = ref('')
 const search = function(){
-    const res = Object.entries(projects_list).filter(([key, val]) => key.indexOf(keywords.value.toLowerCase()) >= 0)
+    const res = Object.entries(projects_list).filter(([key]) => key.indexOf(keywords.value.toLowerCase()) >= 0)
     emit('search', res)
     return res
 }
