@@ -23,5 +23,6 @@ jobs:
         node-version: 18.x
         cache: 'npm'
     - run: npm ci
+    - run: npm run lint # code checke
     - run: npm run build --if-present
-    - run: npm test
+    - run: npm run test:unit # unit test
