@@ -22,20 +22,6 @@ const project_name = route.query.main
 const project_info = projectsList[project_name]
 const logo = ref(project_info&& project_info.logo ? project_info.logo : null)
 
-let PMCChart = null
-const drawPMCGrowth = function(){
-  show({
-    domId: 'PMC-MEMBER-GROWTH',
-    title: 'PMC MEMBER GROWTH',
-    chart: PMCChart, 
-    fun: bar, 
-    config:getSeries.numToDate([{
-        name:'pmc',
-        data:inject('committee')[project_name]['PMC']
-    }])
-  })
-}
-
 let issueChart = null
 const drawIssue = function(){
   show({
@@ -129,11 +115,13 @@ watch(
           {{project_info.description}}
         </div>
       </div>
+
       <div class="charts-box">
         <!-- PMC MEMBER GROWTH -->
         <!-- <div id="PMC-MEMBER-GROWTH" class="graph" >
           
         </div> -->
+
         <!-- participants count -->
         <div id="PARTICIPANT" class="graph">
           

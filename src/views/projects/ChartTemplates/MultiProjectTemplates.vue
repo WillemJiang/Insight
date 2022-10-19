@@ -27,24 +27,6 @@ const sub_project_info = ref(projectsList[sub_project])
 const main_logo = ref(main_project_info.value && main_project_info.value.logo ? main_project_info.value.logo : null)
 const sub_logo = ref(sub_project_info.value && sub_project_info.value.logo ? sub_project_info.value.logo : null)
 
-let PMCChart = null
-const drawPMCGrowth = function(){
-    show({
-        domId: 'PMC-MEMBER-GROWTH',
-        title: 'PMC MEMBER GROWTH',
-        chart: PMCChart, 
-        fun: bar, 
-        config:getSeries.numToDate([{
-            name:main_project,
-            data:inject('committee')[main_project]['PMC']
-        },{
-            name:sub_project,
-            data:inject('committee')[sub_project]['PMC']
-        }])
-    })
-}
-
-
 let issueChart = null
 const drawIssue = function(){
     show({
@@ -192,11 +174,13 @@ watch(
             </div>
         </div>
       </div>
+
       <div class="charts-box">
         <!-- PMC MEMBER GROWTH -->
         <!-- <div id="PMC-MEMBER-GROWTH" class="graph" v-if="display">
           
         </div> -->
+
         <!-- participants count -->
         <div id="PARTICIPANT" class="graph" >
           

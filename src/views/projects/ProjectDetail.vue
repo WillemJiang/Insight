@@ -21,9 +21,6 @@ const updateProjectsList = (e) => {
 
 // nav 
 const NavShow = ref(true)
-const NavSwitch = () => {
-    NavShow.value = !NavShow.value
-}
 
 // projects card click
 const projectCurrent = ref(null)
