@@ -7,7 +7,6 @@ export default function(title, dom, config, myChart){
   if (myChart!= null && myChart!= "" && myChart!= undefined) {
     myChart.dispose();
   }
-
   myChart = echarts.init(dom);
 
   const {series, xAxis} = config

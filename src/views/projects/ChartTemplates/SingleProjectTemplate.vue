@@ -1,11 +1,8 @@
 <script setup>
-import { inject, onMounted, ref, watch,onBeforeUnmount } from 'vue';
+import { inject, onMounted, ref, watch} from 'vue';
 import {  useRoute } from 'vue-router';
 import bar from '../../../assets/js/bar'
 import getSeries  from '../../../assets/js/getSeries'
-
-
-let display = true
 
 const props = defineProps({
   'isExpand':Boolean
@@ -13,7 +10,7 @@ const props = defineProps({
 
 const show = ({domId, chart, fun, config, title}) => {
   const dom = document.getElementById(domId);
-  dom.innerHTML = '';
+  dom.removeAttribute("_echarts_instance_");
   chart = fun(title, dom, config, chart);
   return chart
 }
@@ -119,10 +116,6 @@ watch(
     },300)
   }
 );
-
-onBeforeUnmount(()=>{
-  display = false
-})
 </script>
 
 <template>
@@ -136,7 +129,7 @@ onBeforeUnmount(()=>{
           {{project_info.description}}
         </div>
       </div>
-      <div class="charts-box" v-if="display">
+      <div class="charts-box">
         <!-- PMC MEMBER GROWTH -->
         <!-- <div id="PMC-MEMBER-GROWTH" class="graph" >
           

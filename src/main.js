@@ -9,7 +9,7 @@ import './assets/main.css'
 const app = createApp(App)
 
 // Set global variables
-readJson.apply(app, ['/json/committee.json','committee'])
+readJson.apply(app, ['@/../json/committee.json','committee'])
 
 app.use(router)
 

@@ -27,7 +27,7 @@ export default {
     methods:{
         getData(){
             const request = new XMLHttpRequest();
-            request.open("get",'/json/committee.json');
+            request.open("get",'@/../json/committee.json');
             request.send(null);
             request.onload = () => {
                 if(request.status == 200) {
@@ -39,6 +39,7 @@ export default {
         
         drawScatter(){
             const dom = document.getElementById('Scatter')
+            dom.removeAttribute("_echarts_instance_");
             const chartData = this.data['scatter']
             this.myScatter = scatter(dom, chartData)
             this.myScatter.on('click', (params) => {
@@ -78,7 +79,7 @@ export default {
                 this.subShow = false
             })
         }, 
-    } 
+    }
 }
 </script>
 
