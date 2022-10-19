@@ -48,7 +48,8 @@ jobs:
         with:
           node-version: 18.x
           cache: 'npm'
-      - run: npm run build --if-present
+      - run: npm ci
+      - run: npm run build
       # Upload the built artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
