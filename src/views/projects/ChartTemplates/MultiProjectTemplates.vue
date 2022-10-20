@@ -136,7 +136,6 @@ onMounted(() => {
   drawReviewComment()
   drawParticipant()
   drawIssue()
-
 })
 
 watch(
@@ -159,7 +158,10 @@ watch(
       <div class="head-box">
         <div class="info-box">
             <div v-if="main_logo"  class="logo-box">
-                <img :src="main_logo" :alt="name" class="logo">
+                <img :src="main_logo" :alt="main_project" class="logo">
+            </div>
+            <div v-else  class="logo-box">
+                <i class="logo-text">{{main_project}}</i>
             </div>
             <div class="project-description">
                 {{main_project_info.description}}
@@ -167,7 +169,10 @@ watch(
         </div>
         <div class="info-box">
             <div v-if="sub_logo"  class="logo-box">
-                <img :src="sub_logo" :alt="name" class="logo">
+                <img :src="sub_logo" :alt="sub_project" class="logo">
+            </div>
+            <div v-else  class="logo-box">
+                <i class="logo-text">{{sub_project}}</i>
             </div>
             <div class="project-description">
                 {{sub_project_info.description}}
@@ -176,10 +181,6 @@ watch(
       </div>
 
       <div class="charts-box">
-        <!-- PMC MEMBER GROWTH -->
-        <!-- <div id="PMC-MEMBER-GROWTH" class="graph" v-if="display">
-          
-        </div> -->
 
         <!-- participants count -->
         <div id="PARTICIPANT" class="graph" >
@@ -240,6 +241,14 @@ watch(
   max-width: 100%;
   max-height: 100%;
   position: absolute;
+}
+.head-box .logo-box .logo-text{
+    display: block;
+    position: absolute;
+    font-size: 3rem;
+    line-height: 5rem;
+    left:50%;
+    transform: translateX(-50%);
 }
 .graph{
   min-height: 30rem;

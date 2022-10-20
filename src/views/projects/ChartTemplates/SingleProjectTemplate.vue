@@ -111,17 +111,15 @@ watch(
         <div v-if="logo"  class="logo-box">
           <img :src="logo" :alt="name" class="logo" >
         </div>
+        <div v-else  class="logo-box">
+          <i class="logo-text">{{project_name}}</i>
+        </div>
         <div class="project-description">
           {{project_info.description}}
         </div>
       </div>
 
       <div class="charts-box">
-        <!-- PMC MEMBER GROWTH -->
-        <!-- <div id="PMC-MEMBER-GROWTH" class="graph" >
-          
-        </div> -->
-
         <!-- participants count -->
         <div id="PARTICIPANT" class="graph">
           
@@ -166,6 +164,14 @@ watch(
   max-width: 100%;
   max-height: 100%;
   position: absolute;
+}
+.head-box .logo-box .logo-text{
+    display: block;
+    position: absolute;
+    font-size: 3rem;
+    line-height: 5rem;
+    left:50%;
+    transform: translateX(-50%);
 }
 .graph{
   min-height: 30rem;
