@@ -73,7 +73,7 @@ const sliceArr= function(array, size){
             @click="turnTo(key)"
             />
             <i v-show="pageCurrent < pageTotal - 2" class="fa fa-angle-right fa-3x next-page" aria-hidden="true" @click="nextPgae"></i>
-            <i class="fa fa-2x" v-show="isNone">未查询到结果</i>
+            <i class="fa fa-2x" v-show="isNone">No result found</i>
         </ul>
 
 

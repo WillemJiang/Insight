@@ -91,7 +91,7 @@ const drop = () => {
                     :project_info="project"/>
 
                 </div>
-                <i class="fa fa-x" v-show="isNone">未查询到结果</i>
+                <i class="fa fa-x" v-show="isNone">No result found</i>
             </ul>
         </div>        
     </main>

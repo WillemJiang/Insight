@@ -78,7 +78,7 @@ const drawParticipant = function(){
       chart: participantChart, 
       fun: bar, 
       config:getSeries.numToDate([{
-        name:'issue comment',
+        name:'partipant',
         data:project_info['repo']['p']
       }])
   })
