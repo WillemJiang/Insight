@@ -39,7 +39,11 @@ const turnTo = (...args) => {
 // projects card drag
 const dragItem = ref(null)
 const canvas = ref(null)
+
 const dragstart = (e, item) => {
+
+    e.dataTransfer.setDragImage(e.target.childNodes[0].childNodes[0], 150, 80);
+
     dragItem.value = item;
     canvas.value.addEventListener("dragenter", dragenter);
     canvas.value.addEventListener("dragover", dragover);
@@ -63,7 +67,9 @@ const dragleave = (e) => {
 }
 const drop = () => {
     const code= dragItem.value;
-    turnTo(route.query.main,code);
+    if(route.query.main != code && route.query.sub != code){
+        turnTo(route.query.main,code);
+    }
 }
 
 </script>
@@ -76,8 +82,6 @@ const drop = () => {
             </div>
         </div>
         <div class="right-nav" :class="NavShow?'right-nav-active':'right-nav-hidden'"  >
-            <!-- <button class="nav-switch-open" @click="NavSwitch"><i class="fa fa-chevron-left" aria-hidden="true"></i></button> -->
-            <!-- <button class="nav-switch-close" @click="NavSwitch"><i class="fa fa-times"></i></button> -->
             <div class="search-box">
                 <SearchBox @search="updateProjectsList"/>
             </div>

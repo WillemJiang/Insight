@@ -15,6 +15,9 @@ const description = props.project_info && props.project_info.description ? props
         <div v-if="logo"  class="logo-box">
             <img :src="logo" :alt="name" class="logo">
         </div>
+        <div v-else  class="logo-box">
+            <i class="logo-text">{{card_title}}</i>
+        </div>
         <div class="info-box">
             <h4 class="project-name">{{card_title}}</h4>
             <p class="project-description">{{description}}</p>
@@ -41,12 +44,20 @@ const description = props.project_info && props.project_info.description ? props
     transition: all .3s;
     top:-100%;
 }
-.project-card-box .logo-box img{
+.project-card-box .logo-box .logo{
     max-width: 90%;
     max-height: 90%;
     left:50%;
     top:50%;
     transform: translate(-50%,-50%);
+}
+.project-card-box .logo-box .logo-text{
+    display: block;
+    position: absolute;
+    font-size: 3rem;
+    line-height: 10rem;
+    left:50%;
+    transform: translateX(-50%);
 }
 .project-card-box .info-box{
     position: relative;
@@ -63,6 +74,7 @@ const description = props.project_info && props.project_info.description ? props
 .project-card-box .info-box .project-description{
     color:var(--vt-c-text-light-2) ;
 }
+
 
 </style>
     
