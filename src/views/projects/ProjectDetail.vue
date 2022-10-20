@@ -41,7 +41,9 @@ const dragItem = ref(null)
 const canvas = ref(null)
 
 const dragstart = (e, item) => {
-    e.dataTransfer.setDragImage(e.target.childNodes[0].childNodes[0], 150, 80);//5000 will be out of the window
+
+    e.dataTransfer.setDragImage(e.target.childNodes[0].childNodes[0], 150, 80);
+
     dragItem.value = item;
     canvas.value.addEventListener("dragenter", dragenter);
     canvas.value.addEventListener("dragover", dragover);
@@ -65,7 +67,9 @@ const dragleave = (e) => {
 }
 const drop = () => {
     const code= dragItem.value;
-    turnTo(route.query.main,code);
+    if(route.query.main != code && route.query.sub != code){
+        turnTo(route.query.main,code);
+    }
 }
 
 </script>
