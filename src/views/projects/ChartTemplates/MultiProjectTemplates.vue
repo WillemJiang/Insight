@@ -34,7 +34,7 @@ const drawIssue = function(){
         title:'ISSUE OPEN',
         chart: issueChart, 
         fun: bar, 
-        config:getSeries.numToDate([{
+        config:getSeries.bar([{
             name:main_project,
             data:main_project_info.value['repo']['oi']
         },{
@@ -51,7 +51,7 @@ const drawOpenPr = function(){
         chart: openPrChart, 
         title:'OPEN PR',
         fun: bar, 
-        config:getSeries.numToDate([{
+        config:getSeries.bar([{
             name:main_project,
             data:main_project_info.value['repo']['op']
         },{
@@ -68,7 +68,7 @@ const drawMergePr = function(){
         chart: mergePrChart, 
         title:'MERGE PR',
         fun: bar, 
-        config:getSeries.numToDate([{
+        config:getSeries.bar([{
             name:main_project,
             data:main_project_info.value['repo']['pm']
         },{
@@ -85,7 +85,7 @@ const drawIssueComment = function(){
         chart: issueCommentChart, 
         fun: bar, 
         title:'ISSUE COMMENTS',
-        config:getSeries.numToDate([{
+        config:getSeries.bar([{
             name:main_project,
             data:main_project_info.value['repo']['ic']
         },{
@@ -102,7 +102,7 @@ const drawReviewComment = function(){
         chart: reviewCommentChart, 
         fun: bar, 
         title:'REVIEW COMMENTS',
-        config:getSeries.numToDate([{
+        config:getSeries.bar([{
             name:main_project,
             data:main_project_info.value['repo']['rc']
         },{
@@ -119,7 +119,7 @@ const drawParticipant = function(){
         title:'PARTICIPANT',
         chart: participantChart, 
         fun: bar, 
-        config:getSeries.numToDate([{
+        config:getSeries.bar([{
             name:main_project,
             data:main_project_info.value['repo']['p']
         },{

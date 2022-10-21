@@ -29,7 +29,7 @@ const drawIssue = function(){
     title:'ISSUE-OPEN',
     chart: issueChart, 
     fun: bar, 
-    config:getSeries.numToDate([{
+    config:getSeries.bar([{
       name:'issue open',
       data:project_info['repo']['oi']
     }])
@@ -43,7 +43,7 @@ const drawPr = function(){
       title:'PR',
       chart: prChart, 
       fun: bar, 
-      config:getSeries.numToDate([{
+      config:getSeries.bar([{
         name:'open pull',
         data:project_info['repo']['op']
       },{
@@ -60,7 +60,7 @@ const drawComment = function(){
       title:'COMMENTS',
       chart: commentChart, 
       fun: bar, 
-      config:getSeries.numToDate([{
+      config:getSeries.bar([{
         name:'issue comment',
         data:project_info['repo']['ic']
       },{
@@ -77,7 +77,7 @@ const drawParticipant = function(){
       title:'PARTICIPANT',
       chart: participantChart, 
       fun: bar, 
-      config:getSeries.numToDate([{
+      config:getSeries.bar([{
         name:'partipant',
         data:project_info['repo']['p']
       }])

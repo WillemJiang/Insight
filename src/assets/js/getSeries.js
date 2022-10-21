@@ -9,7 +9,7 @@ const toMonth = (a) => {
   return a.slice(0,4) + '-' + a.slice(4)
 }
 
-const getSeries = (data) =>{
+const getBarSeries = (data) =>{
 
   let xAxis = []
 
@@ -40,5 +40,5 @@ const getSeries = (data) =>{
 
 }
 export default {
-  numToDate: getSeries,
+  bar: getBarSeries,
 }
