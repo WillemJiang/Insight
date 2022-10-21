@@ -76,8 +76,6 @@ const sliceArr= function(array, size){
             <i class="fa fa-2x" v-show="isNone">No result found</i>
         </ul>
 
-
-
     </main>
 </template>
 
@@ -93,17 +91,28 @@ const sliceArr= function(array, size){
     flex-wrap: wrap;
     align-content: space-around;
     width: 100%;
-    padding: 3rem;
-    padding-top: 4rem;
+    justify-content: center;
+    margin-top: 3rem;
 }
 .pre-page{
     position: absolute;
     left:2rem;
     top:50%;
+    cursor: pointer;
 }
 .next-page{
     position: absolute;
     right:2rem;
     top:50%;
+    cursor: pointer;
+}
+.next-page,.pre-page{
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+}
+.next-page:hover,.pre-page:hover{
+    background-color: rgba(85, 85, 85, 0.233);
 }
 </style>

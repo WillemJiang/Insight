@@ -16,7 +16,7 @@ const description = props.project_info && props.project_info.description ? props
             <img :src="logo" :alt="name" class="logo">
         </div>
         <div v-else  class="logo-box">
-            <i class="logo-text">{{card_title}}</i>
+            <i class="logo-text" :style="{ 'fontSize':25 / (card_title.length + 2) + 'rem' }">{{card_title}}</i>
         </div>
         <div class="info-box">
             <h4 class="project-name">{{card_title}}</h4>

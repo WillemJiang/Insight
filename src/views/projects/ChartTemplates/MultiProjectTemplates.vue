@@ -1,6 +1,7 @@
 <script setup>
 import { inject, onMounted, ref, watch} from 'vue';
 import {  useRoute } from 'vue-router';
+import ProjectInfoCard from '../../../components/ProjectInfoCard.vue'
 import bar from '../../../assets/js/bar'
 import getSeries  from '../../../assets/js/getSeries'
 
@@ -23,9 +24,6 @@ const show = ({domId, chart, fun, config, title}) => {
 
 const main_project_info = ref(projectsList[main_project])
 const sub_project_info = ref(projectsList[sub_project])
-
-const main_logo = ref(main_project_info.value && main_project_info.value.logo ? main_project_info.value.logo : null)
-const sub_logo = ref(sub_project_info.value && sub_project_info.value.logo ? sub_project_info.value.logo : null)
 
 let issueChart = null
 const drawIssue = function(){
@@ -156,28 +154,15 @@ watch(
   <main>
     <div class="project-info-box">
       <div class="head-box">
-        <div class="info-box">
-            <div v-if="main_logo"  class="logo-box">
-                <img :src="main_logo" :alt="main_project" class="logo">
-            </div>
-            <div v-else  class="logo-box">
-                <i class="logo-text">{{main_project}}</i>
-            </div>
-            <div class="project-description">
-                {{main_project_info.description}}
-            </div>
-        </div>
-        <div class="info-box">
-            <div v-if="sub_logo"  class="logo-box">
-                <img :src="sub_logo" :alt="sub_project" class="logo">
-            </div>
-            <div v-else  class="logo-box">
-                <i class="logo-text">{{sub_project}}</i>
-            </div>
-            <div class="project-description">
-                {{sub_project_info.description}}
-            </div>
-        </div>
+        <ProjectInfoCard
+            :name="main_project"
+            :project_info="main_project_info"
+        />
+
+        <ProjectInfoCard
+            :name="sub_project"
+            :project_info="sub_project_info"
+        />
       </div>
 
       <div class="charts-box">
@@ -231,24 +216,6 @@ watch(
 }
 .head-box .info-box:first-child{
     margin-right: 1rem;
-}
-
-.head-box .logo-box{
-  height: 5rem;
-  width: 15rem;
-}
-.head-box .logo-box .logo{
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-}
-.head-box .logo-box .logo-text{
-    display: block;
-    position: absolute;
-    font-size: 3rem;
-    line-height: 5rem;
-    left:50%;
-    transform: translateX(-50%);
 }
 .graph{
   min-height: 30rem;

@@ -1,6 +1,7 @@
 <script setup>
-import { inject, onMounted, ref, watch} from 'vue';
+import { inject, onMounted, watch} from 'vue';
 import {  useRoute } from 'vue-router';
+import ProjectInfoCard from '../../../components/ProjectInfoCard.vue'
 import bar from '../../../assets/js/bar'
 import getSeries  from '../../../assets/js/getSeries'
 
@@ -20,7 +21,6 @@ const projectsList = inject('committee')['committees']
 
 const project_name = route.query.main
 const project_info = projectsList[project_name]
-const logo = ref(project_info&& project_info.logo ? project_info.logo : null)
 
 let issueChart = null
 const drawIssue = function(){
@@ -107,17 +107,10 @@ watch(
 <template>
   <main>
     <div class="project-info-box">
-      <div class="head-box">
-        <div v-if="logo"  class="logo-box">
-          <img :src="logo" :alt="name" class="logo" >
-        </div>
-        <div v-else  class="logo-box">
-          <i class="logo-text">{{project_name}}</i>
-        </div>
-        <div class="project-description">
-          {{project_info.description}}
-        </div>
-      </div>
+      <ProjectInfoCard
+        :name="project_name"
+        :project_info="project_info"
+      />
 
       <div class="charts-box">
         <!-- participants count -->
@@ -146,32 +139,11 @@ watch(
 .project-info-box{
   width: 100%;
 }
-.head-box, .charts-box{
+.charts-box{
   border: 1px solid rgb(180, 180, 180);
   border-radius: 5px;
   padding: 2rem;
 
-}
-.head-box{
-  width:100%;
-  margin-bottom: 1rem;
-}
-.head-box .logo-box{
-  height: 5rem;
-  width: 15rem;
-}
-.head-box .logo-box .logo{
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-}
-.head-box .logo-box .logo-text{
-    display: block;
-    position: absolute;
-    font-size: 3rem;
-    line-height: 5rem;
-    left:50%;
-    transform: translateX(-50%);
 }
 .graph{
   min-height: 30rem;
