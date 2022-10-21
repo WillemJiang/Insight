@@ -51,6 +51,16 @@ export default {
                         return [item[1], item[0], item[2]];
                     });
                     this.myScatter.setOption({
+                        tooltip: {
+                            formatter: function (params) {
+                                if(params.componentSubType == 'scatter'){
+                                    const size = params.data[2]
+                                    const xAxis = years[params.data[0]]
+                                    const yAxis = committees[params.data[1]]
+                                    return `${xAxis} <br/> ${yAxis}: ${size}`;
+                                }
+                            }
+                        },
                         xAxis: {
                             data: years,
                         },
