@@ -1,6 +1,12 @@
 import * as echarts from 'echarts'
 
 
+function isDataEmpty(xAxis){
+  if(xAxis.length === 0){
+    return true
+  }
+  return false
+}
 
 export default function(title, dom, config, myChart){
 
@@ -10,7 +16,7 @@ export default function(title, dom, config, myChart){
   myChart = echarts.init(dom);
 
   const {series, xAxis} = config
-
+  
   const option = {
     title: {
       text: title,
@@ -48,6 +54,17 @@ export default function(title, dom, config, myChart){
     series: series
   };
   myChart.setOption(option);
+  if (isDataEmpty(xAxis)) {
+    myChart.showLoading({
+      text: 'No data for display',
+      showSpinner: false,
+      textColor: '#9d9d9d',
+      maskColor: 'rgba(255, 255, 255, 0.8)',
+      fontSize: '25px',
+      fontWeight: 'bold',
+      fontFamily: 'Microsoft YaHei'
+    });
+  }
 
   return myChart
 }
