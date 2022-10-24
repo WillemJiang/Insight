@@ -10,6 +10,8 @@ export default {
             popup:null,
             data:[],
             subShow:false,
+            tagList:[],
+            tagCurrent:''
         }
     },
     created(){
@@ -31,7 +33,9 @@ export default {
             request.send(null);
             request.onload = () => {
                 if(request.status == 200) {
-                    this.data = JSON.parse(request.responseText);                  
+                    this.data = JSON.parse(request.responseText);   
+                    this.tagList = Object.keys(this.data['scatter']).splice(0,10) 
+                    this.tagCurrent = this.tagList[0]         
                     this.drawScatter()
                 }
             }
@@ -40,38 +44,10 @@ export default {
         drawScatter(){
             const dom = document.getElementById('Scatter')
             dom.removeAttribute("_echarts_instance_");
-            const chartData = this.data['scatter']
+            const chartData = this.data['scatter'][this.tagCurrent]
             this.myScatter = scatter(dom, chartData)
             this.myScatter.on('click', (params) => {
-                if(params.componentType == "graphic"){
-                    const data = chartData[params.name]
-                    const years = data['xAxis']
-                    const committees = data['yAxis']
-                    const size = data['size'].map(function (item) {
-                        return [item[1], item[0], item[2]];
-                    });
-                    this.myScatter.setOption({
-                        tooltip: {
-                            formatter: function (params) {
-                                if(params.componentSubType == 'scatter'){
-                                    const size = params.data[2]
-                                    const xAxis = years[params.data[0]]
-                                    const yAxis = committees[params.data[1]]
-                                    return `${xAxis} <br/> ${yAxis}: ${size}`;
-                                }
-                            }
-                        },
-                        xAxis: {
-                            data: years,
-                        },
-                        yAxis: {
-                            data: committees,
-                        },
-                        series: [{
-                            data: size
-                        }]
-                    })
-                }else if(params.componentType == "series"){
+                if(params.componentType == "series"){
                     const committees = chartData[params.seriesName]['yAxis']
                     this.drawLine(committees[params.value[1]])
                 }
@@ -80,6 +56,10 @@ export default {
                 this.myScatter.resize()
             }
         },     
+        tagSelect(tag){
+            this.tagCurrent = tag
+            this.drawScatter()
+        },
         drawLine(committee){
             this.subShow = true
             const data = this.data['committee_detail'][committee]
@@ -95,6 +75,14 @@ export default {
 
 <template>
     <div id="Scatter"></div>
+    <ul class="tag-box">
+        <li 
+        v-for="item in tagList" 
+        :key="item" class="tag" 
+        :class="{'tag-active': item === tagCurrent}"
+        @click="tagSelect(item)"
+        >{{item}}</li>
+    </ul>
     <div id="popup" :class="subShow?'sub-show':'sub-hide'"></div>
 </template>
 
@@ -104,6 +92,29 @@ export default {
         flex:1;
         width: 90vw;
         height:90vh;
+    }
+    .tag-box{
+        position: absolute;
+        top:3rem;
+        left:450px;
+        height: 2rem;
+        width: calc(100% - 450px - 4rem);
+        user-select: none;
+    }
+    .tag-box .tag{
+        display: inline-block;
+        margin: 3px 15px;
+        padding: 0px 10px;
+        border-radius: 15px;
+        size: 18px;
+        border: 1px solid #7d95e1;
+        background-color: white;
+        color: #7d95e1;
+        cursor: pointer;
+    }
+    .tag-box .tag-active,.tag-box .tag:active{
+        color: white;
+        background-color: #7d95e1;
     }
     #popup{
         position: absolute;
@@ -116,6 +127,7 @@ export default {
         padding: 0;
         overflow: hidden;
     }
+
     .sub-show{
         width: 60vw;
         height:50vh;

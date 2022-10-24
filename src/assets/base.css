@@ -65,6 +65,7 @@
   padding:0;
   position: relative;
   font-weight: normal;
+  list-style: none;
 }
 
 body {
