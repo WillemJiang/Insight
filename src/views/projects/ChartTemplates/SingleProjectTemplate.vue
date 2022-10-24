@@ -24,7 +24,7 @@ const project_info = projectsList[project_name]
 
 let issueChart = null
 const drawIssue = function(){
-  show({
+  issueChart = show({
     domId: 'ISSUE-OPEN',
     title:'ISSUE-OPEN',
     chart: issueChart, 
@@ -38,7 +38,7 @@ const drawIssue = function(){
 
 let prChart = null
 const drawPr = function(){
-  show({
+  prChart = show({
       domId: 'PR',
       title:'PR',
       chart: prChart, 
@@ -55,7 +55,7 @@ const drawPr = function(){
 
 let commentChart = null
 const drawComment = function(){
-  show({
+  commentChart = show({
       domId: 'COMMENT',
       title:'COMMENTS',
       chart: commentChart, 
@@ -72,7 +72,7 @@ const drawComment = function(){
 
 let participantChart = null
 const drawParticipant = function(){
-  show({
+  participantChart = show({
       domId: 'PARTICIPANT',
       title:'PARTICIPANT',
       chart: participantChart, 
@@ -96,6 +96,10 @@ watch(
   () => props.isExpand,
   () => {
     let timer = setInterval(()=>{
+      issueChart.resize()
+      prChart.resize()
+      commentChart.resize()
+      participantChart.resize()
     }, 10)
     setTimeout(()=>{
       clearInterval(timer)
@@ -105,14 +109,14 @@ watch(
 </script>
 
 <template>
-  <main>
-    <div class="project-info-box">
+  <main >
+    <div class="project-info-box" >
       <ProjectInfoCard
         :name="project_name"
         :project_info="project_info"
       />
 
-      <div class="charts-box">
+      <div class="charts-box" >
         <!-- participants count -->
         <div id="PARTICIPANT" class="graph">
           
@@ -143,8 +147,8 @@ watch(
   border: 1px solid rgb(180, 180, 180);
   border-radius: 5px;
   padding: 2rem;
-
 }
+
 .graph{
   min-height: 30rem;
   min-width: 5rem;
