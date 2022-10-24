@@ -48,7 +48,7 @@ export default {
             this.myScatter = scatter(dom, chartData)
             this.myScatter.on('click', (params) => {
                 if(params.componentType == "series"){
-                    const committees = chartData[params.seriesName]['yAxis']
+                    const committees = chartData['yAxis']
                     this.drawLine(committees[params.value[1]])
                 }
             });
