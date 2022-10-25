@@ -78,7 +78,7 @@ const drawParticipant = function(){
       chart: participantChart, 
       fun: bar, 
       config:getSeries.bar([{
-        name:'partipant',
+        name:'participant',
         data:project_info['repo']['p']
       }])
   })
