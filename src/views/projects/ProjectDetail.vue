@@ -20,7 +20,10 @@ const updateProjectsList = (e) => {
 }
 
 // nav 
-const NavShow = ref(true)
+const NavShow = ref(false)
+const NavSwitch = () => {
+    NavShow.value = !NavShow.value
+}     
 
 // projects card click
 const projectCurrent = ref(null)
@@ -76,12 +79,14 @@ const drop = () => {
 
 <template>
     <main>
-        <div class="graphic-box">
+        <div class="graphic-box" :class="{'isFolded': NavShow}">
             <div class="graphic" ref="canvas">
                 <RouterView :isExpand="!NavShow" :key="projectCurrent"/>
             </div>
         </div>
         <div class="right-nav" :class="NavShow?'right-nav-active':'right-nav-hidden'"  >
+            <button class="nav-switch-open" @click="NavSwitch"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+            <button class="nav-switch-close" @click="NavSwitch"><i class="fa fa-times"></i></button>
             <div class="search-box">
                 <SearchBox @search="updateProjectsList"/>
             </div>
@@ -172,6 +177,9 @@ main{
 .projects-list{
     flex:1;
     overflow-y: auto;
+}
+.isFolded{
+  width:calc(100% - 33rem);
 }
 </style>
     

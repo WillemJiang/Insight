@@ -27,7 +27,7 @@ const sub_project_info = ref(projectsList[sub_project])
 
 let issueChart = null
 const drawIssue = function(){
-    show({
+    issueChart = show({
         domId: 'ISSUE-OPEN',
         title:'ISSUE OPEN',
         chart: issueChart, 
@@ -44,7 +44,7 @@ const drawIssue = function(){
 
 let openPrChart = null
 const drawOpenPr = function(){
-    show({
+    openPrChart = show({
         domId: 'OPEN-PR', 
         chart: openPrChart, 
         title:'OPEN PR',
@@ -61,7 +61,7 @@ const drawOpenPr = function(){
 
 let mergePrChart = null
 const drawMergePr = function(){
-    show({
+    mergePrChart = show({
         domId: 'MERGE-PR', 
         chart: mergePrChart, 
         title:'MERGE PR',
@@ -78,7 +78,7 @@ const drawMergePr = function(){
 
 let issueCommentChart = null
 const drawIssueComment = function(){
-    show({
+    issueCommentChart = show({
         domId:'ISSUE-COMMENT', 
         chart: issueCommentChart, 
         fun: bar, 
@@ -95,7 +95,7 @@ const drawIssueComment = function(){
 
 let reviewCommentChart = null
 const drawReviewComment = function(){
-    show({
+    reviewCommentChart = show({
         domId:'REVIEW-COMMENT', 
         chart: reviewCommentChart, 
         fun: bar, 
@@ -140,7 +140,12 @@ watch(
   () => props.isExpand,
   () => {
     let timer = setInterval(()=>{
-
+      issueChart.resize()
+      openPrChart.resize()
+      mergePrChart.resize()
+      issueCommentChart.resize()
+      reviewCommentChart.resize()
+      participantChart.resize()
     }, 10)
     setTimeout(()=>{
       clearInterval(timer)
