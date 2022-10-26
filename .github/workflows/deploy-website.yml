@@ -50,12 +50,7 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build
-      # Upload the built artifact
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          # Upload entire repository
-          path: './dist'
+      
 
   # Deployment job
   deploy:
@@ -67,4 +62,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          clean-exclude: pr-preview/
