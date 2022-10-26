@@ -1,5 +1,4 @@
 import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { visualizer } from 'rollup-plugin-visualizer';
@@ -13,13 +12,10 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  test:{
-    environment:'jsdom'
-  },
   build: {
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
-    plugins: [ visualizer( ) ],
-      external:['vue'],
+      plugins: [ visualizer( ) ],
       output:{
         manualChunks(id) {
           if (!id.includes('node_modules')) {
@@ -32,27 +28,22 @@ export default defineConfig({
             dependencyName = id.toString().split('node_modules/')[2];
           }
           const arr = dependencyName.split('/');
-      
-          // echarts is too large to be a single chunk, needed to be splitted
-          if (arr[0] == 'echarts') {
-            if (arr[2] == 'component' || arr[2] == 'coord') {
-              return '_' + arr[0] + '_' + arr[1] + '_' + arr[2];
-            }
-          
-            return '_' + arr[0];
-          }
+
           switch(arr[0]) {
             case '@vue':
             case 'echarts':
             case 'zrender':
               return '_' + arr[0]
-
+              break;
             default :
               return '__vendor'
-              
+              break;
           }
         }
       }
     }
   },
+  test:{
+    environment:'jsdom'
+  }
 })
