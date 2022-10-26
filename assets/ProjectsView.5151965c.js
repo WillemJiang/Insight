@@ -1,1 +1,0 @@
-import{_ as o}from"./index.4711d2fc.js";import{b as t,o as r,y as _}from"./_@vue.e8f5048c.js";import"./__vendor.7ec403f7.js";import"./_echarts.e925a001.js";import"./_zrender.d509ed34.js";const c={};function n(s,i){const e=t("RouterView");return r(),_(e)}const l=o(c,[["render",n]]);export{l as default};
