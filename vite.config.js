@@ -37,9 +37,9 @@ export default defineConfig({
             case '@vue':
             case 'echarts':
             case 'zrender':
-              return '_' + arr[0]
+              return arr[0]
             default :
-              return '__vendor'
+              return 'vendor'
           }
         }
       }
