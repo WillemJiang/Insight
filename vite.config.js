@@ -1,4 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
+
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { visualizer } from 'rollup-plugin-visualizer';
@@ -11,6 +12,9 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  test:{
+    environment:'jsdom'
   },
   build: {
     chunkSizeWarningLimit: 1000,
@@ -34,16 +38,11 @@ export default defineConfig({
             case 'echarts':
             case 'zrender':
               return '_' + arr[0]
-              break;
             default :
               return '__vendor'
-              break;
           }
         }
       }
     }
-  },
-  test:{
-    environment:'jsdom'
   }
 })
