@@ -1,8 +1,12 @@
 import * as echarts from 'echarts'
+import getSeries from './getSeries';
 
 export default function line(dom, data, title, close_func){
-    const lineValue = getTotal(data.values)
-    const established = data['established'].split('/')[1] + '-'+(data['established'].split('/')[0] - 0)
+    let {series, xAxis} = getSeries.bar([{
+        name:'PMC',
+        data:data['pmc']
+      }])
+    const lineData = getTotal(series[0]['data']) 
     const myChart = echarts.init(dom,'roma');
     const option = {
         tooltip: {
@@ -43,7 +47,7 @@ export default function line(dom, data, title, close_func){
         xAxis: [
             {
                 type: 'category',
-                data:data['xAxis']
+                data: xAxis
             }
         ],
         yAxis: [{
@@ -62,29 +66,12 @@ export default function line(dom, data, title, close_func){
         {
             name: 'new',
             type: 'bar',
-            data: data.values
+            data: series[0]['data']
         },
         {
             name: 'total',
             type: 'line',
-            data: lineValue
-        },
-        {
-            data: [[data['xAxis'].indexOf(established),lineValue[data['xAxis'].indexOf(established)]]],
-            type: 'scatter',
-            symbol: 'path://M512 85.9l110.8 318.7 337.2 6.8-268.8 203.8 97.7 322.9L512 745.4 235.1 938.1l97.7-322.9L64 411.4l337.2-6.8z',
-            symbolSize: 20,
-            tooltip: {
-                show:false
-            },
-            label: {
-                show: true,
-                formatter: function () {
-                    return 'established';
-                },
-                position: [40,20],
-                minMargin: 2
-            }
+            data: lineData
         }]
     };
     myChart.setOption(option);
@@ -96,6 +83,7 @@ export default function line(dom, data, title, close_func){
 
 
 function getTotal(raw_list){
+    console.log(raw_list);
     let list =[]
     let  a = 0
     raw_list.forEach(el => {

@@ -38,6 +38,8 @@ def getTag(str):
     committees_info['committees'][str]['tag'] = tag
 
     return tag
+
+
 # Add tags to projects
 def addTag(raw_df):
     df = raw_df
@@ -100,34 +102,25 @@ def scatterData(raw_df):
 # Subchart: monthly growth graph for the selected committee 
 def completeMonthColumn(df):
     # Complete the year-months from the date of creation to the present
-    df['year_month'] = df['year'].map(str) +'-' +df['month'].map(str)
-    result_dict = {}
+    df['year_month'] = df['year'].map(str) + df['month'].map(str)
+    result_dict = committees_info
 
     for committee in committee_list:
+        pmc_dict = {}
         sub_df = df[df['committee'] == committee]
-        year_list = sub_df['year']
         date_list = list(sub_df['year_month'])
-        date_list_new = [str(year) + '-' + str(month) for year in range(int(year_list.min()),today.year + 1) for month in range(1,13)]
-        data_list_min = date_list[0]
-        data_list_max = str(today.year) + '-' + str(today.month)
-        date_list_new = date_list_new[date_list_new.index(data_list_min):date_list_new.index(data_list_max)+1]
-        add_list =[]
-        for date in date_list_new:
-            if date in date_list:
-                add_list.append(list(sub_df[sub_df['year_month'] == date]['add'])[0])
-            else:
-                add_list.append(0)
-        result_dict[committee] = {
-            'xAxis':date_list_new,
-            'values':add_list,
-            'description':committees_info['committees'][committee]["description"],
-            'established':committees_info['committees'][committee]["established"]
-        }
-        
+
+        for date in date_list:
+
+            pmc_dict[date] = list(sub_df[sub_df['year_month'] == date]['add'])[0]
+
+        result_dict['committees'][committee]['pmc'] = pmc_dict
+    
 
     return result_dict
-            
-def lineData(raw_df):
+
+
+def addPMC(raw_df):
     df = raw_df.groupby(['committee','year','month'])['name'].count().to_frame()
     df.reset_index(inplace = True)
     df.rename(columns={'name':'add'},inplace=True)
@@ -231,14 +224,13 @@ if __name__ == '__main__':
     # or get data directly from 'https://whimsy.apache.org/public/committee-info.json'
 
     committees,pmc_member,committees_info, committee_list = getCommittees('https://whimsy.apache.org/public/committee-info.json')
+    committees_info = addPMC(pmc_member)
 
     scatter = scatterData(pmc_member)
-    committee_detail_dict = lineData(pmc_member)
 
     committee_data = {
         "committees":committees_info['committees'],
-        'scatter':scatter,
-        "committee_detail":committee_detail_dict
+        'scatter':scatter
     }
 
     file_name = './public/json/committee.json'

@@ -55,14 +55,16 @@ export default {
             window.onresize = () => {
                 this.myScatter.resize()
             }
-        },     
+        },  
+
         tagSelect(tag){
             this.tagCurrent = tag
             this.drawScatter()
         },
+
         drawLine(committee){
             this.subShow = true
-            const data = this.data['committee_detail'][committee]
+            const data = this.data['committees'][committee]
             const title = committee
             const dom = document.getElementById('popup')
             this.popup = line(dom, data, title, ()=>{
