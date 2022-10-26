@@ -16,14 +16,31 @@ const sub_project = route.query.sub
 const projectsList = inject('committee')['committees']
 
 const show = ({domId, chart, fun, config, title}) => {
-    const dom = document.getElementById(domId);
-    dom.removeAttribute("_echarts_instance_");
-    chart = fun(title, dom, config, chart);
-    return chart
+  const dom = document.getElementById(domId);
+  dom.removeAttribute("_echarts_instance_");
+  chart = fun(title, dom, config, chart);
+  return chart
 }
 
 const main_project_info = ref(projectsList[main_project])
 const sub_project_info = ref(projectsList[sub_project])
+
+let PMCChart = null
+const drawPMC = function(){
+  PMCChart = show({
+        domId: 'PMC',
+        title:'PMC GROWTH',
+        chart: PMCChart, 
+        fun: bar, 
+        config:getSeries.bar([{
+            name:main_project,
+            data:main_project_info.value['pmc']
+        },{
+            name:sub_project,
+            data:sub_project_info.value['pmc']
+        }])
+    })
+}
 
 let issueChart = null
 const drawIssue = function(){
@@ -128,6 +145,7 @@ const drawParticipant = function(){
 }
 
 onMounted(() => {
+  drawPMC()
   drawOpenPr()
   drawMergePr()
   drawIssueComment()
@@ -140,6 +158,7 @@ watch(
   () => props.isExpand,
   () => {
     let timer = setInterval(()=>{
+      PMCChart.resize()
       issueChart.resize()
       openPrChart.resize()
       mergePrChart.resize()
@@ -171,6 +190,10 @@ watch(
       </div>
 
       <div class="charts-box">
+        <!-- participants count -->
+        <div id="PMC" class="graph" >
+          
+        </div>
 
         <!-- participants count -->
         <div id="PARTICIPANT" class="graph" >

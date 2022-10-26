@@ -1,6 +1,6 @@
 <script setup>
 import { inject, onMounted, watch} from 'vue';
-import {  useRoute } from 'vue-router';
+import { useRoute } from 'vue-router';
 import ProjectInfoCard from '../../../components/ProjectInfoCard.vue'
 import bar from '../../../assets/js/bar'
 import getSeries  from '../../../assets/js/getSeries'
@@ -22,6 +22,20 @@ const projectsList = inject('committee')['committees']
 const project_name = route.query.main
 const project_info = projectsList[project_name]
 
+let PMCChart = null
+const drawPMC = function(){
+  PMCChart= show({
+    domId: 'PMC',
+    title:'PMC GROWTH',
+    chart: PMCChart, 
+    fun: bar, 
+    config:getSeries.bar([{
+      name:'PMC',
+      data:project_info['pmc']
+    }])
+  })
+}
+
 let issueChart = null
 const drawIssue = function(){
   issueChart = show({
@@ -39,17 +53,17 @@ const drawIssue = function(){
 let prChart = null
 const drawPr = function(){
   prChart = show({
-      domId: 'PR',
-      title:'PR',
-      chart: prChart, 
-      fun: bar, 
-      config:getSeries.bar([{
-        name:'open pull',
-        data:project_info['repo']['op']
-      },{
-        name:'merge pull',
-        data:project_info['repo']['pm']
-      }])
+    domId: 'PR',
+    title:'PR',
+    chart: prChart, 
+    fun: bar, 
+    config:getSeries.bar([{
+      name:'open pull',
+      data:project_info['repo']['op']
+    },{
+      name:'merge pull',
+      data:project_info['repo']['pm']
+    }])
   })
 }
 
@@ -85,17 +99,18 @@ const drawParticipant = function(){
 }
 
 onMounted(() => {
+  drawPMC()
   drawIssue()
   drawPr()
   drawParticipant()
   drawComment()
-
 })
 
 watch(
   () => props.isExpand,
   () => {
     let timer = setInterval(()=>{
+      PMCChart.resize()
       issueChart.resize()
       prChart.resize()
       commentChart.resize()
@@ -117,6 +132,10 @@ watch(
       />
 
       <div class="charts-box" >
+        <!-- participants count -->
+        <div id="PMC" class="graph" >
+          
+        </div>
         <!-- participants count -->
         <div id="PARTICIPANT" class="graph">
           
