@@ -10,6 +10,9 @@ const app = createApp(App)
 
 // Set global variables
 readJson.apply(app, ['@/../json/committee.json','committee'])
+readJson.apply(app, ['@/../json/projects_total.json','repo'])
+readJson.apply(app, ['@/../Qi/qi.json','qi'])
+
 
 app.use(router)
 
