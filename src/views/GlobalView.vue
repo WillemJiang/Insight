@@ -5,7 +5,6 @@ import rankBar from '../assets/js/rankBar'
 
 
 let rankPieChart = null
-let rankSelected = null
 
 const drawPieChart = function(dataList){
   const dom = document.getElementById('QiChart');
@@ -15,7 +14,6 @@ const drawPieChart = function(dataList){
     const selected = params.event.target.selected
     const name = params.name
     expand.value = selected
-    rankSelected = name
     if(selected){
       drawBarChart(dataList,name)
     }
