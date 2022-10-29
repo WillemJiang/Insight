@@ -25,7 +25,7 @@ export default function(title, dom, config, myChart){
     },
     grid: {
       top:'20%',
-      left:30,
+      left:80,
       right:30,
       bottom:30,
     },
