@@ -30,22 +30,40 @@ export default function( dom,myChart, dataList){
         data: [
           {
             value: dataList.filter(item => item.rank == 'Super Healthy').length,
-            name: 'Super Healthy'
+            name: 'Super Healthy',
+            itemStyle:{
+              color:'#62bddd'
+            }
           },{ 
             value: dataList.filter(item => item.rank == 'Healthy').length, 
-            name: 'Healthy' 
+            name: 'Healthy',
+            itemStyle:{
+              color:'#27717a'
+            }
           },{ 
             value: dataList.filter(item => item.rank == 'Mostly Okay').length, 
-            name: 'Mostly Okay' 
+            name: 'Mostly Okay',
+            itemStyle:{
+              color:'#9ac961'
+            }
           },{ 
             value: dataList.filter(item => item.rank == 'Unhealthy').length, 
-            name: 'Unhealthy' 
+            name: 'Unhealthy',
+            itemStyle:{
+              color:'#f6d762'
+            }
           },{ 
             value: dataList.filter(item => item.rank == 'Action required').length, 
-            name: 'Action required' 
+            name: 'Action required',
+            itemStyle:{
+              color:'#f2a33a'
+            }
           },{ 
             value: dataList.filter(item => item.rank == 'URGENT ACTION REQUIRED').length, 
-            name: 'URGENT ACTION REQUIRED' 
+            name: 'URGENT ACTION REQUIRED',
+            itemStyle:{
+              color:'#d54e4a'
+            }
           }
         ],
         emphasis: {
@@ -53,6 +71,16 @@ export default function( dom,myChart, dataList){
             shadowBlur: 10,
             shadowOffsetX: 0,
             shadowColor: 'rgba(0, 0, 0, 0.5)'
+          }
+        },
+        select:{
+          itemStyle: {
+            shadowBlur: 10,
+            shadowOffsetX: 0,
+            shadowColor: 'rgba(0, 0, 0, 0.5)'
+          },
+          label:{
+            fontSize:24
           }
         }
       }

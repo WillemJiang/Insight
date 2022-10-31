@@ -2,7 +2,9 @@
 import { onMounted, ref} from 'vue';
 import rankPie from '../assets/js/rankPie'
 import rankBar from '../assets/js/rankBar'
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 
 let rankPieChart = null
 
@@ -15,16 +17,22 @@ const drawPieChart = function(dataList){
     const name = params.name
     expand.value = selected
     if(selected){
-      drawBarChart(dataList,name)
+      drawBarChart(dataList,name,params.color)
     }
   })
 }
 
 let qiBarChart = null
-const drawBarChart = function(dataList,name){
+const drawBarChart = function(dataList,title,itemColor){
   const dom = document.getElementById('RanckBar');
   dom.removeAttribute("_echarts_instance_");
-  qiBarChart = rankBar(dom, qiBarChart, dataList,name)
+  qiBarChart = rankBar(dom, qiBarChart, dataList, title, itemColor)
+  qiBarChart.on('click',(params) => {
+    const project_name = params.name || params.value
+    if (project_name){
+      router.push(`/projects/detail/project?main=${project_name}`);
+    }
+  })
 }
 
 const ObjToList = function(obj){

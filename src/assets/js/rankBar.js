@@ -1,6 +1,7 @@
 import * as echarts from 'echarts';
 
-export default function( dom, myChart, dataList, rank){
+export default function( dom, myChart, dataList, rank, itemColor){
+  const data = dataList.filter(item => item.rank == rank)
 
   if (myChart!= null && myChart!= "" && myChart!= undefined) {
     myChart.dispose();
@@ -10,18 +11,42 @@ export default function( dom, myChart, dataList, rank){
   var option;
 
   option = {
+    tooltip:{
+      show:true,
+    },
+    title:{
+      text:rank
+    },
     xAxis: {
-      type: 'value'
+      type: 'value',
+      splitLine:false,
+      axisLabel:{
+        show:false
+      }
     },
     yAxis: {
       type: 'category',
-      data:  dataList.filter(item => item.rank == rank).map(item => item.name)
+      triggerEvent:true,
+      data: data.map(item => item.name)
     },
+    dataZoom:data.length > 40?{
+      id: 'dataZoomY',
+      type: 'slider',
+      yAxisIndex: [0],
+      filterMode: 'empty',
+      end:3000/data.length,
+    }:null,
     series: [
       {
-        data:  dataList.filter(item => item.rank == rank).map(item => item.score),
+        data: data.map(item => item.score),
         type: 'bar',
         showBackground: true,
+        label:{
+          show:true
+        },
+        itemStyle:{
+          color:itemColor
+        },
         backgroundStyle: {
           color: 'rgba(180, 180, 180, 0.2)'
         }
