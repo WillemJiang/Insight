@@ -3,7 +3,7 @@ name: Deploy the PR preview of the Insight Website
 on:
   pull_request:
     branches: [ "main" ]
-    
+    types: [review_requested] # only deploy when the review is requested
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
