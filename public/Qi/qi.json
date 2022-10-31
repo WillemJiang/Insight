@@ -1,0 +1,1713 @@
+{
+  "cocoon": { 
+    "description":"Apache Cocoon: URGENT ACTION REQUIRED!",
+      "Health score": -8.77,
+      "Score note1":"Less than one email per month to all MLs combined in the past quarter (-2.25&#27683;)",
+      "Score note2":"Less than one email per 2 days to all MLs combined in the past six months (-1.50&#27683;)",
+      "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+      "Score note4":"No new members added to the LDAP committee group for more than 2 years (-2.00&#27683;)",
+      "Score note5":"No new committers invited for more than 2 years (-2.00&#27683;)"
+  },
+
+  "rya": { 
+    "description":"Apache Rya: URGENT ACTION REQUIRED!",
+      "Health score": -8.77,
+      "Score note1":"Less than one email per month to all MLs combined in the past quarter (-2.25&#27683;)",
+      "Score note6":"Less than one email per month sent to all MLs combined in the last six months (-2.00&#27683;)",
+      "Score note7":" No releases in the last year (-1.00&#27683;)",
+      "Score note4":"No new members added to the LDAP committee group for more than 2 years (-2.00&#27683;)",
+      "Score note5":"No new committers invited for more than 2 years (-2.00&#27683;)"
+  },
+
+"buildstream": { 
+    "description":"Apache BuildStream: URGENT ACTION REQUIRED!",
+    "Health score": -8.36,
+    "Score note8":"No email sent to ANY ML in the past quarter (-2.50&#27683;)",
+    "Score note6":"Less than one email per month sent to all MLs combined in the last six months (-2.00&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note4":"No new members added to the LDAP committee group for more than 2 years (-2.00&#27683;)",
+    "Score note5":"No new committers invited for more than 2 years (-2.00&#27683;)"
+  },
+
+"mxnet": { 
+    "description":"Apache MXNet: URGENT ACTION REQUIRED!",
+    "Health score": -8.36,
+    "Score note8":"No email sent to ANY ML in the past quarter (-2.50&#27683;)",
+    "Score note6":"Less than one email per month sent to all MLs combined in the last six months (-2.00&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note4":"No new members added to the LDAP committee group for more than 2 years (-2.00&#27683;)",
+    "Score note5":"No new committers invited for more than 2 years (-2.00&#27683;)"
+  },
+
+"juddi": { 
+    "description":"Apache jUDDI: URGENT ACTION REQUIRED!",
+    "Health score": -7.96,
+    "Score note1":"Less than one email per month to all MLs combined in the past quarter (-2.25&#27683;)",
+    "Score note2":"Less than one email per 2 days to all MLs combined in the past six months (-1.50&#27683;)",
+    "Score note7":" No releases in the last year (-1.00&#27683;)",
+    "Score note4":"No new members added to the LDAP committee group for more than 2 years (-2.00&#27683;)",
+    "Score note5":"No new committers invited for more than 2 years (-2.00&#27683;)"
+  },
+
+"age": { 
+    "description":"Apache AGE: URGENT ACTION REQUIRED!",
+    "Health score": -7.55,
+    "Score note8":"No email sent to ANY ML in the past quarter (-2.50&#27683;)",
+    "Score note6":"Less than one email per month sent to all MLs combined in the last six months (-2.00&#27683;)",
+    "Score note4":"No new members added to the LDAP committee group for more than 2 years (-2.00&#27683;)",
+    "Score note5":"No new committers invited for more than 2 years (-2.00&#27683;)"
+  },
+
+"bloodhound": { 
+    "description":"Apache Bloodhound: URGENT ACTION REQUIRED!",
+    "Health score": -6.32,
+    "Score note8":"No email sent to ANY ML in the past quarter (-2.50&#27683;)",
+    "Score note10":"Less than one email per week to all MLs combined in the past six months (-1.75&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"petri": { 
+    "description":"Apache Petri: URGENT ACTION REQUIRED!",
+    "Health score": -5.91,
+    "Score note8":"No email sent to ANY ML in the past quarter (-2.50&#27683;)",
+    "Score note2":"Less than one email per 2 days to all MLs combined in the past six months (-1.50&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note4":"No new members added to the LDAP committee group for more than 2 years (-2.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"giraph": { 
+    "description":"Apache Giraph: URGENT ACTION REQUIRED!",
+    "Health score": -5.51,
+    "Score note13":"Less than one email per week to all MLs combined in the past quarter (-1.75&#27683;)",
+    "Score note6":"Less than one email per month sent to all MLs combined in the last six months (-2.00&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"serf": { 
+    "description":"Apache Serf: Action required!",
+    "Health score": -5.10,
+    "Score note13":"Less than one email per week to all MLs combined in the past quarter (-1.75&#27683;)",
+    "Score note10":"Less than one email per week to all MLs combined in the past six months (-1.75&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"streams": { 
+    "description":"Apache Streams: Action required!",
+    "Health score": -5.10,
+    "Score note13":"Less than one email per week to all MLs combined in the past quarter (-1.75&#27683;)",
+    "Score note10":"Less than one email per week to all MLs combined in the past six months (-1.75&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"synapse": { 
+    "description":"Apache Synapse: Action required!",
+    "Health score": -4.69,
+    "Score note13":"Less than one email per week to all MLs combined in the past quarter (-1.75&#27683;)",
+    "Score note2":"Less than one email per 2 days to all MLs combined in the past six months (-1.50&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"ctakes": { 
+    "description":"Apache cTAKES: Action required!",
+    "Health score": -4.28,
+    "Score note14":"Less than one email per 2 days to all MLs combined in the past quarter (-1.50&#27683;",
+    "Score note2":"Less than one email per 2 days to all MLs combined in the past six months (-1.50&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"mahout": { 
+    "description":"Apache Mahout: Action required!",
+    "Health score": -4.28,
+    "Score note14":"Less than one email per 2 days to all MLs combined in the past quarter (-1.50&#27683;",
+    "Score note2":"Less than one email per 2 days to all MLs combined in the past six months (-1.50&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"vcl": { 
+    "description":"Apache VCL: Action required!",
+    "Health score": -4.28,
+    "Score note14":"Less than one email per 2 days to all MLs combined in the past quarter (-1.50&#27683;",
+    "Score note2":"Less than one email per 2 days to all MLs combined in the past six months (-1.50&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"xalan": { 
+    "description":"Apache Xalan: Action required!",
+    "Health score": -4.28,
+    "Score note14":"Less than one email per 2 days to all MLs combined in the past quarter (-1.50&#27683;",
+    "Score note2":"Less than one email per 2 days to all MLs combined in the past six months (-1.50&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"bval": { 
+    "description":"Apache BVal: Action required!",
+    "Health score": -3.87,
+    "Score note1":"Less than one email per month to all MLs combined in the past quarter (-2.25&#27683;)",
+    "Score note6":"Less than one email per month sent to all MLs combined in the last six months (-2.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"doris": { 
+    "description":"Apache Doris: Action required!",
+    "Health score": -3.87,
+    "Score note8":"No email sent to ANY ML in the past quarter (-2.50&#27683;)",
+    "Score note6":"Less than one email per month sent to all MLs combined in the last six months (-2.00&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note4":"No new members added to the LDAP committee group for more than 2 years (-2.00&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"pivot": { 
+    "description":"Apache Pivot: Action required!",
+    "Health score": -3.87,
+    "Score note1":"Less than one email per month to all MLs combined in the past quarter (-2.25&#27683;)",
+    "Score note2":"Less than one email per 2 days to all MLs combined in the past six months (-1.50&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"shenyu": { 
+    "description":"Apache ShenYu: Action required!",
+    "Health score": -3.87,
+    "Score note8":"No email sent to ANY ML in the past quarter (-2.50&#27683;)",
+    "Score note6":"Less than one email per month sent to all MLs combined in the last six months (-2.00&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note4":"No new members added to the LDAP committee group for more than 2 years (-2.00&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"datafu": { 
+    "description":"Apache DataFu: Action required!",
+    "Health score": -3.47,
+    "Score note18":"Less than one email per day to all MLs combined in the past quarter (-1.00&#27683;)",
+    "Score note19":"Less than one email per day to all MLs combined in the past six months (-1.00&#27683;)",
+    "Score note7":" No releases in the last year (-1.00&#27683;)",
+    "Score note4":"No new members added to the LDAP committee group for more than 2 years (-2.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"steve": { 
+    "description":"Apache Steve: Action required!",
+    "Health score": -3.47,
+    "Score note8":"No email sent to ANY ML in the past quarter (-2.50&#27683;)",
+    "Score note6":"Less than one email per month sent to all MLs combined in the last six months (-2.00&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"gora": { 
+    "description":"Apache Gora: Action required!",
+    "Health score": -2.65,
+    "Score note18":"Less than one email per day to all MLs combined in the past quarter (-1.00&#27683;)",
+    "Score note19":"Less than one email per day to all MLs combined in the past six months (-1.00&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"madlib": { 
+    "description":"Apache MADlib: Action required!",
+    "Health score": -2.65,
+    "Score note18":"Less than one email per day to all MLs combined in the past quarter (-1.00&#27683;)",
+    "Score note19":"Less than one email per day to all MLs combined in the past six months (-1.00&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"gump":{
+    "description":"Apache Gump: Unhealthy",
+    "Health score": -2.24,
+    "Score note13":"Less than one email per week to all MLs combined in the past quarter (-1.75&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note4":"No new members added to the LDAP committee group for more than 2 years (-2.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"kibble":{
+    "description":"Apache Kibble: Unhealthy",
+    "Health score": -2.24,
+    "Score note13":"Less than one email per week to all MLs combined in the past quarter (-1.75&#27683;)",
+    "Score note19":"Less than one email per day to all MLs combined in the past six months (-1.00&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"tcl":{
+    "description":"Apache Tcl: Unhealthy",
+    "Health score": -1.83,
+    "Score note18":"Less than one email per day to all MLs combined in the past quarter (-1.00&#27683;)",
+    "Score note19":"Less than one email per day to all MLs combined in the past six months (-1.00&#27683;)",
+    "Score note4":"No new members added to the LDAP committee group for more than 2 years (-2.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"velocity":{
+    "description":"Apache Velocity: Unhealthy",
+    "Health score": -1.83,
+    "Score note18":"Less than one email per day to all MLs combined in the past quarter (-1.00&#27683;)",
+    "Score note19":"Less than one email per day to all MLs combined in the past six months (-1.00&#27683;)",
+    "Score note7":" No releases in the last year (-1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"empire-db":{
+    "description":"Apache Empire-db: Unhealthy",
+    "Health score": -1.43,
+    "Score note13":"Less than one email per week to all MLs combined in the past quarter (-1.75&#27683;)",
+    "Score note2":"Less than one email per 2 days to all MLs combined in the past six months (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"freemarker":{
+    "description":"Apache FreeMarker: Unhealthy",
+    "Health score": -1.02,
+    "Score note20":"Less than two emails per day to all MLs combined in the past quarter (-0.50&#27683;)",
+    "Score note7":" No releases in the last year (-1.00&#27683;)",
+    "Score note4":"No new members added to the LDAP committee group for more than 2 years (-2.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"griffin":{
+    "description":"Apache Griffin: Unhealthy",
+    "Health score": -1.02,
+    "Score note14":"Less than one email per 2 days to all MLs combined in the past quarter (-1.50&#27683;",
+    "Score note7":" No releases in the last year (-1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"juneau":{
+    "description":"Apache Juneau: Unhealthy",
+    "Health score": -1.02,
+    "Score note18":"Less than one email per day to all MLs combined in the past quarter (-1.00&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"olingo":{
+    "description":"Apache Olingo: Unhealthy",
+    "Health score": -1.02,
+    "Score note14":"Less than one email per 2 days to all MLs combined in the past quarter (-1.50&#27683;",
+    "Score note19":"Less than one email per day to all MLs combined in the past six months (-1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"oodt":{
+    "description":"Apache OODT: Unhealthy",
+    "Health score": -1.02,
+    "Score note14":"Less than one email per 2 days to all MLs combined in the past quarter (-1.50&#27683;",
+    "Score note7":" No releases in the last year (-1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"attic":{
+    "description":"Apache Attic: Unhealthy",
+    "Health score": -0.20,
+    "Score note14":"Less than one email per 2 days to all MLs combined in the past quarter (-1.50&#27683;",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"pig":{
+    "description":"Apache Pig: Unhealthy",
+    "Health score": -0.20,
+    "Score note20":"Less than two emails per day to all MLs combined in the past quarter (-0.50&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"inlong":{
+    "description":"Apache InLong: Unhealthy",
+    "Health score": 0.21,
+    "Score note8":"No email sent to ANY ML in the past quarter (-2.50&#27683;)",
+    "Score note6":"Less than one email per month sent to all MLs combined in the last six months (-2.00&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"deltaspike":{
+    "description":"Apache DeltaSpike: Mostly Okay",
+    "Health score": 0.62,
+    "Score note14":"Less than one email per 2 days to all MLs combined in the past quarter (-1.50&#27683;",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"yunikorn":{
+    "description":"Apache YuniKorn: Mostly Okay",
+    "Health score": 0.62,
+    "Score note8":"No email sent to ANY ML in the past quarter (-2.50&#27683;)",
+    "Score note6":"Less than one email per month sent to all MLs combined in the last six months (-2.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"apr":{
+    "description":"Apache Portable Runtime (APR): Mostly Okay",
+    "Health score": 1.43,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"axis":{
+    "description":"Apache Axis: Mostly Okay",
+    "Health score": 1.43,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"bahir":{
+    "description":"Apache Bahir: Mostly Okay",
+    "Health score": 1.43,
+    "Score note20":"Less than two emails per day to all MLs combined in the past quarter (-0.50&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"flex":{
+    "description":"Apache Flex: Mostly Okay",
+    "Health score": 1.43,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"flume":{
+    "description":"Apache Flume: Mostly Okay",
+    "Health score": 1.43,
+    "Score note14":"Less than one email per 2 days to all MLs combined in the past quarter (-1.50&#27683;",
+    "Score note2":"Less than one email per 2 days to all MLs combined in the past six months (-1.50&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"fluo":{
+    "description":"Apache Fluo: Mostly Okay",
+    "Health score": 1.43,
+    "Score note20":"Less than two emails per day to all MLs combined in the past quarter (-0.50&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"hawq":{
+    "description":"Apache HAWQ: Mostly Okay",
+    "Health score": 1.43,
+    "Score note20":"Less than two emails per day to all MLs combined in the past quarter (-0.50&#27683;)",
+    "Score note7":" No releases in the last year (-1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"johnzon":{
+    "description":"Apache Johnzon: Mostly Okay",
+    "Health score": 1.43,
+    "Score note18":"Less than one email per day to all MLs combined in the past quarter (-1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"manifoldcf":{
+    "description":"Apache ManifoldCF: Mostly Okay",
+    "Health score": 1.43,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"perl":{
+    "description":"Apache Perl: Mostly Okay",
+    "Health score": 1.43,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note4":"No new members added to the LDAP committee group for more than 2 years (-2.00&#27683;)",
+    "Score note5":"No new committers invited for more than 2 years (-2.00&#27683;)"
+  },
+
+"ant":{
+    "description":"Apache Ant: Mostly Okay",
+    "Health score": 2.25,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note7":" No releases in the last year (-1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"archiva":{
+    "description":"Apache Archiva: Mostly Okay",
+    "Health score": 2.25,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"curator":{
+    "description":"Apache Curator: Mostly Okay",
+    "Health score": 2.25,
+    "Score note20":"Less than two emails per day to all MLs combined in the past quarter (-0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"jclouds":{
+    "description":"Apache jclouds: Mostly Okay",
+    "Health score": 2.25,
+    "Score note20":"Less than two emails per day to all MLs combined in the past quarter (-0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"libcloud":{
+    "description":"Apache Libcloud: Mostly Okay",
+    "Health score": 2.25,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"mesos":{
+    "description":"Apache Mesos: Mostly Okay",
+    "Health score": 2.25,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note7":" No releases in the last year (-1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"oozie":{
+    "description":"Apache Oozie: Mostly Okay",
+    "Health score": 2.25,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note7":" No releases in the last year (-1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"opennlp":{
+    "description":"Apache OpenNLP: Mostly Okay",
+    "Health score": 2.25,
+    "Score note20":"Less than two emails per day to all MLs combined in the past quarter (-0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"portals":{
+    "description":"Apache Portals: Mostly Okay",
+    "Health score": 2.25,
+    "Score note20":"Less than two emails per day to all MLs combined in the past quarter (-0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"roller":{
+    "description":"Apache Roller: Mostly Okay",
+    "Health score": 2.25,
+    "Score note20":"Less than two emails per day to all MLs combined in the past quarter (-0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"singa":{
+    "description":"Apache SINGA: Mostly Okay",
+    "Health score": 2.25,
+    "Score note20":"Less than two emails per day to all MLs combined in the past quarter (-0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"xerces":{
+    "description":"Apache Xerces: Mostly Okay",
+    "Health score": 2.25,
+    "Score note20":"Less than two emails per day to all MLs combined in the past quarter (-0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"airavata":{
+    "description":"Apache Airavata: Mostly Okay",
+    "Health score": 3.06,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"brooklyn":{
+    "description":"Apache Brooklyn: Mostly Okay",
+    "Health score": 3.06,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"parquet":{
+    "description":"Apache Parquet: Mostly Okay",
+    "Health score": 3.06,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note7":" No releases in the last year (-1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"spamassassin":{
+    "description":"Apache SpamAssassin: Mostly Okay",
+    "Health score": 3.06,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note7":" No releases in the last year (-1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"tez":{
+    "description":"Apache Tez: Mostly Okay",
+    "Health score": 3.06,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note7":" No releases in the last year (-1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"zeppelin":{
+    "description":"Apache Zeppelin: Mostly Okay",
+    "Health score": 3.06,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"allura":{
+    "description":"Apache Allura: Healthy",
+    "Health score": 3.88,
+    "Score note20":"Less than two emails per day to all MLs combined in the past quarter (-0.50&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"any23":{
+    "description":"Apache Any23: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"aries":{
+    "description":"Apache Aries: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"cayenne":{
+    "description":"Apache Cayenne: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"creadur":{
+    "description":"Apache Creadur: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"db":{
+    "description":"Apache DB: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"geronimo":{
+    "description":"Apache Geronimo: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"helix":{
+    "description":"Apache Helix: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"knox":{
+    "description":"Apache Knox: Healthy",
+    "Health score": 3.88,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"mnemonic":{
+    "description":"Apache Mnemonic: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"openjpa":{
+    "description":"Apache OpenJPA: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"openwebbeans":{
+    "description":"Apache OpenWebBeans: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"samza":{
+    "description":"Apache Samza: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"santuario":{
+    "description":"Apache Santuario: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"shiro":{
+    "description":"Apache Shiro: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"storm":{
+    "description":"Apache Storm: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"subversion":{
+    "description":"Apache Subversion: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"webservices":{
+    "description":"Apache Web Services: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"whimsy":{
+    "description":"Apache Whimsy: Healthy",
+    "Health score": 3.88,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"xmlgraphics":{
+    "description":"Apache XML Graphics: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"yetus":{
+    "description":"Apache Yetus: Healthy",
+    "Health score": 3.88,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"cordova":{
+    "description":"Apache Cordova: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"cxf":{
+    "description":"Apache CXF: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"directory":{
+    "description":"Apache Directory: Healthy",
+    "Health score": 4.70,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"felix":{
+    "description":"Apache Felix: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"guacamole":{
+    "description":"Apache Guacamole: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"httpcomponents":{
+    "description":"Apache HttpComponents: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"httpd":{
+    "description":"Apache HTTP Server: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"isis":{
+    "description":"Apache Isis: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"jena":{
+    "description":"Apache Jena: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"jmeter":{
+    "description":"Apache JMeter: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"jspwiki":{
+    "description":"Apache JSPWiki: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"karaf":{
+    "description":"Apache Karaf: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"kudu":{
+    "description":"Apache Kudu: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"kylin":{
+    "description":"Apache Kylin: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"myfaces":{
+    "description":"Apache MyFaces: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"mynewt":{
+    "description":"Apache Mynewt: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"nutch":{
+    "description":"Apache Nutch: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"openmeetings":{
+    "description":"Apache OpenMeetings: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"pdfbox":{
+    "description":"Apache PDFBox: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"pinot":{
+    "description":"Apache Pinot: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note4":"No new members added to the LDAP committee group for more than 2 years (-2.00&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"poi":{
+    "description":"Apache POI: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"servicemix":{
+    "description":"Apache ServiceMix: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"sis":{
+    "description":"Apache SIS: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"struts":{
+    "description":"Apache Struts: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"tika":{
+    "description":"Apache Tika: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"turbine":{
+    "description":"Apache Turbine: Healthy",
+    "Health score": 4.70,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"uima":{
+    "description":"Apache UIMA: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"wicket":{
+    "description":"Apache Wicket: Healthy",
+    "Health score": 4.70,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"gobblin":{
+    "description":"Apache Gobblin: Healthy",
+    "Health score": 5.11,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note4":"No new members added to the LDAP committee group for more than 2 years (-2.00&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"bigtop":{
+    "description":"Apache Bigtop: Healthy",
+    "Health score": 5.51,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"cloudstack":{
+    "description":"Apache CloudStack: Healthy",
+    "Health score": 5.51,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"commons":{
+    "description":"Apache Commons: Healthy",
+    "Health score": 5.51,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"couchdb":{
+    "description":"Apache CouchDB: Healthy",
+    "Health score": 5.51,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"daffodil":{
+    "description":"Apache Daffodil: Healthy",
+    "Health score": 5.51,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"datasketches":{
+    "description":"Apache DataSketches: Healthy",
+    "Health score": 5.51,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"lucenenet":{
+    "description":"Apache Lucene.Net: Healthy",
+    "Health score": 5.51,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"mina":{
+    "description":"Apache MINA: Healthy",
+    "Health score": 5.51,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"openwhisk":{
+    "description":"Apache OpenWhisk: Healthy",
+    "Health score": 5.51,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"qpid":{
+    "description":"Apache Qpid: Healthy",
+    "Health score": 5.51,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"zookeeper":{
+    "description":"Apache ZooKeeper: Healthy",
+    "Health score": 5.51,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"atlas":{
+    "description":"Apache Atlas: Healthy",
+    "Health score": 5.92,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note7":" No releases in the last year (-1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"hop":{
+    "description":"Apache Hop: Healthy",
+    "Health score": 5.92,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note4":"No new members added to the LDAP committee group for more than 2 years (-2.00&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"plc4x":{
+    "description":"Apache PLC4X: Healthy",
+    "Health score": 5.92,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note7":" No releases in the last year (-1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"comdev":{
+    "description":"Apache Community Development: Healthy",
+    "Health score": 6.33,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"hbase":{
+    "description":"Apache HBase: Healthy",
+    "Health score": 6.33,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"hive":{
+    "description":"Apache Hive: Healthy",
+    "Health score": 6.33,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"tapestry":{
+    "description":"Apache Tapestry: Healthy",
+    "Health score": 6.33,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"trafficcontrol":{
+    "description":"Apache Traffic Control: Healthy",
+    "Health score": 6.33,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"syncope":{
+    "description":"Apache Syncope: Healthy",
+    "Health score": 6.74,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"activemq":{
+    "description":"Apache ActiveMQ: Healthy",
+    "Health score": 7.15,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"cassandra":{
+    "description":"Apache Cassandra: Healthy",
+    "Health score": 7.15,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"groovy":{
+    "description":"Apache Groovy: Healthy",
+    "Health score": 7.15,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"jackrabbit":{
+    "description":"Apache Jackrabbit: Healthy",
+    "Health score": 7.15,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note3":" No releases in the last 2+ years (-1.50&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"openoffice":{
+    "description":"Apache OpenOffice: Healthy",
+    "Health score": 7.15,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"servicecomb":{
+    "description":"Apache ServiceComb: Healthy",
+    "Health score": 7.15,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"solr":{
+    "description":"Apache Solr: Healthy",
+    "Health score": 7.15,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"submarine":{
+    "description":"Apache Submarine: Healthy",
+    "Health score": 7.15,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"systemds":{
+    "description":"Apache SystemDS: Healthy",
+    "Health score": 7.15,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"tomee":{
+    "description":"Apache TomEE: Healthy",
+    "Health score": 7.15,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note12":"No new committers invited for more than a year (-1.00&#27683;)"
+  },
+
+"ambari":{
+    "description":"Apache Ambari: Healthy",
+    "Health score": 7.55,
+    "Score note20":"Less than two emails per day to all MLs combined in the past quarter (-0.50&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"asterixdb":{
+    "description":"Apache AsterixDB: Healthy",
+    "Health score": 7.55,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"beam":{
+    "description":"Apache Beam: Healthy",
+    "Health score": 7.55,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"geode":{
+    "description":"Apache Geode: Healthy",
+    "Health score": 7.55,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"ofbiz":{
+    "description":"Apache OFBiz: Healthy",
+    "Health score": 7.55,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"ranger":{
+    "description":"Apache Ranger: Healthy",
+    "Health score": 7.55,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"tomcat":{
+    "description":"Apache Tomcat: Healthy",
+    "Health score": 7.55,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"unomi":{
+    "description":"Apache Unomi: Healthy",
+    "Health score": 7.55,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note11":"No new members added to the LDAP committee group for more than a year (-1.00&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"avro":{
+    "description":"Apache Avro: Healthy",
+    "Health score": 7.96,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"iotdb":{
+    "description":"Apache IoTDB: Healthy",
+    "Health score": 7.96,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"logging":{
+    "description":"Apache Logging Services: Healthy",
+    "Health score": 7.96,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"netbeans":{
+    "description":"Apache NetBeans: Healthy",
+    "Health score": 7.96,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"phoenix":{
+    "description":"Apache Phoenix: Healthy",
+    "Health score": 7.96,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"royale":{
+    "description":"Apache Royale: Healthy",
+    "Health score": 7.96,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note17":"No new committers invited for more than six months (-0.50&#27683;)"
+  },
+
+"thrift":{
+    "description":"Apache Thrift: Healthy",
+    "Health score": 7.96,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"bookkeeper":{
+    "description":"Apache BookKeeper: Healthy",
+    "Health score": 8.37,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"camel":{
+    "description":"Apache Camel: Healthy",
+    "Health score": 8.37,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"drill":{
+    "description":"Apache Drill: Healthy",
+    "Health score": 8.37,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"druid":{
+    "description":"Apache Druid: Healthy",
+    "Health score": 8.37,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note7":" No releases in the last year (-1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"hudi":{
+    "description":"Apache Hudi: Healthy",
+    "Health score": 8.37,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"iceberg":{
+    "description":"Apache Iceberg: Healthy",
+    "Health score": 8.37,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"maven":{
+    "description":"Apache Maven: Healthy",
+    "Health score": 8.37,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"ozone":{
+    "description":"Apache Ozone: Healthy",
+    "Health score": 8.37,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note16":"No new members added to the LDAP committee group for more than six months (-0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"spark":{
+    "description":"Apache Spark: Healthy",
+    "Health score": 8.37,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note7":" No releases in the last year (-1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"celix":{
+    "description":"Apache Celix: Healthy",
+    "Health score": 9.19,
+    "Score note23":"More than 2 emails per day to all MLs combined in the past quarter (+0.50&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"incubator":{
+    "description":"Apache Incubator: Healthy",
+    "Health score": 9.19,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"pulsar":{
+    "description":"Apache Pulsar: Healthy",
+    "Health score": 9.19,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"shardingsphere":{
+    "description":"Apache ShardingSphere: Healthy",
+    "Health score": 9.19,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note9":"No release data available! (-0.50&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"echarts":{
+    "description":"Apache ECharts: Super Healthy",
+    "Health score": 9.60,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"impala":{
+    "description":"Apache Impala: Super Healthy",
+    "Health score": 9.60,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"james":{
+    "description":"Apache James: Super Healthy",
+    "Health score": 9.60,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"orc":{
+    "description":"Apache ORC: Super Healthy",
+    "Health score": 9.60,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"ratis":{
+    "description":"Apache Ratis: Super Healthy",
+    "Health score": 9.60,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"sling":{
+    "description":"Apache Sling: Super Healthy",
+    "Health score": 9.60,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"superset":{
+    "description":"Apache Superset: Super Healthy",
+    "Health score": 9.60,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note22":"New committer(s) invited within the last six months (+0.50&#27683;)"
+  },
+
+"accumulo":{
+    "description":"Apache Accumulo: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"airflow":{
+    "description":"Apache Airflow: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"apisix":{
+    "description":"Apache APISIX: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"arrow":{
+    "description":"Apache Arrow: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"calcite":{
+    "description":"Apache Calcite: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"carbondata":{
+    "description":"Apache CarbonData: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"dolphinscheduler":{
+    "description":"Apache DolphinScheduler: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"dubbo":{
+    "description":"Apache Dubbo: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"fineract":{
+    "description":"Apache Fineract: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"flink":{
+    "description":"Apache Flink: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"hadoop":{
+    "description":"Apache Hadoop: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"ignite":{
+    "description":"Apache Ignite: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"kafka":{
+    "description":"Apache Kafka: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"lucene":{
+    "description":"Apache Lucene: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"nifi":{
+    "description":"Apache NiFi: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"rocketmq":{
+    "description":"Apache RocketMQ: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"skywalking":{
+    "description":"Apache SkyWalking: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"tinkerpop":{
+    "description":"Apache TinkerPop: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"trafficserver":{
+    "description":"Apache Traffic Server: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  },
+
+"tvm":{
+    "description":"Apache TVM: Super Healthy",
+    "Health score": 10.00,
+    "Score note24":"More than 4 emails per day to all MLs combined in the past quarter (+1.00&#27683;)",
+    "Score note21":"New members() added to the LDAP committee group within the last six months (+0.50&#27683;)",
+    "Score note15":"New committer(s) invited within the last three months (+0.75&#27683;)"
+  }
+}
