@@ -1,3 +1,22 @@
+"""
+ This is the default license template.
+ 
+ File: spider.py
+ Author: 夏宇
+ Copyright (c) 2022 夏宇
+ 
+ To edit this license information: Press Ctrl+Shift+P and press 'Create new License Template...'.
+"""
+
+This is the default license template.
+ 
+ File: spider.py
+ Author: 夏宇
+ Copyright (c) 2022 夏宇
+ 
+ To edit this license information: Press Ctrl+Shift+P and press 'Create new License Template...'.
+"""
+
 import urllib.request
 import time
 import re
